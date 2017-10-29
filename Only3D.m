@@ -18,8 +18,8 @@ len = size(t,1);
 freq =0.4;
 Z = 0.3 + 0.1*sin(2*pi*freq*t);% 300mm +- 100mm
 VZ = 2*pi*freq*0.1*cos(2*pi*freq*t);
-% Z = 0.8 - 0.1*t;% 300mm +- 100mm
-% VZ = -0.1+0*t;
+Z = 0.8 - 0.1*t;% 300mm +- 100mm
+VZ = -0.1+0*t;
 
 %% Noisy Observation 
 BF = 0.065*400; % base line * focal length
@@ -96,18 +96,17 @@ for i=2:length(t)
     else
         R1_ = R1; mD = mDisp(i);        
     end
-    %H1 = [0 -BF_/Xhat(2)/Xhat(2) 0];
+    H1 = [0 -BF_/Xhat(2)/Xhat(2) 0];
     %H1 = [0 -mD/Xhat(2) 0];
-    H1 = [0 -mD^2/BF_ 0];
+    %H1 = [0 -mD^2/BF_ 0];
 
     H2 = [Xhat(2) Xhat(1) 0];
-    H2 = [0 1/Z0 0];
     
-    
-    Kgain = Phat * H2.' / (H2*Phat*H2.'+R2);
-    % update 2
-    Xnew =  Xhat + Kgain*(1/Scale(i) - Xhat(1)*Xhat(2));
-    Pnew = (eye(3) - Kgain*H2)*Phat;
+    % KF gain
+    Kgain = Phat * H1.' / (H1*Phat*H1.'+R1_);
+    % update
+    Xnew =  Xhat + Kgain*(mDisp(i) - BF_/Xhat(2));
+    Pnew = (eye(3) - Kgain*H1)*Phat ;
 
     
     X(:,i) = Xnew;

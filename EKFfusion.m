@@ -18,8 +18,8 @@ len = size(t,1);
 freq =0.4;
 Z = 0.3 + 0.1*sin(2*pi*freq*t);% 300mm +- 100mm
 VZ = 2*pi*freq*0.1*cos(2*pi*freq*t);
-%Z = 0.8 - 0.1*t;% 300mm +- 100mm
-%VZ = -0.1+0*t;
+Z= 0.8 - 0.1*t;% 300mm +- 100mm
+VZ = -0.1+0*t;
 
 %% Noisy Observation 
 BF = 0.065*400; % base line * focal length

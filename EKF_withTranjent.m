@@ -18,7 +18,7 @@ len = size(t,1);
 freq =0.4;
 Z = 0.3 + 0.1*sin(2*pi*freq*t);% 300mm +- 100mm
 VZ = 2*pi*freq*0.1*cos(2*pi*freq*t);
-% Z = 0.8 - 0.1*t;% 300mm +- 100mm
+% Z= 0.8 - 0.1*t;% 300mm +- 100mm
 % VZ = -0.1+0*t;
 
 %% Noisy Observation 
@@ -51,6 +51,7 @@ IMG_SIZE = 600/2% 300 times 300 pix template
 MonoNoise = MONO_NOISE_S*randn(length(t),1); % sigma = 1px image noise 
 Snoise = 2./(Z0./Z * IMG_SIZE).* MonoNoise;
 Scale = Z0./Z + Snoise;
+dScale =[1; Scale(2:length(t))./Scale(1:length(t)-1)];
 
 figure(3);
 plot(t,Scale,'r',t,Z0./Z,'b--')
@@ -79,16 +80,12 @@ KG = zeros(3,2,length(t));
 P(:,:,1) = Pinit;
 X(:,1) = Xinit;
 
-
 %%
 BF_ = BF;
 for i=2:length(t)
     % Estimate
     Xhat = A * X(:,i-1);
     Phat = A*P(:,:,i-1)*A.' + Q;
-
-    
-    
     
     % Switch value
     if mDisp(i)== INFF
@@ -99,21 +96,39 @@ for i=2:length(t)
     %H1 = [0 -BF_/Xhat(2)/Xhat(2) 0];
     %H1 = [0 -mD/Xhat(2) 0];
     H1 = [0 -mD^2/BF_ 0];
+    
+    % KF gain
+    Kgain = Phat * H1.' / (H1*Phat*H1.'+R1_);
+    % update
+    Xhat2 =  Xhat + Kgain*(mDisp(i) - BF_/Xhat(2));
+    Phat2 = (eye(3) - Kgain*H1)*Phat ;
 
-    H2 = [Xhat(2) Xhat(1) 0];
-    H2 = [0 1/Z0 0];
+    % KF gain2
+%     if mDisp(i)== INFF
+%         H2 = [0 Xhat2(1) 0];
+%     else
+%         H2 = [Xhat2(2) Xhat2(1) 0];
+%     end
+    H2 = [Xhat2(2) Xhat2(1) 0];
+%     H2 = [0 1/Z0 0];
     
-    
-    Kgain = Phat * H2.' / (H2*Phat*H2.'+R2);
+    Kgain2 = Phat2 * H2.' / (H2*Phat2*H2.'+R2);
     % update 2
-    Xnew =  Xhat + Kgain*(1/Scale(i) - Xhat(1)*Xhat(2));
-    Pnew = (eye(3) - Kgain*H2)*Phat;
+    Xhat3 =  Xhat2 + Kgain2*(1/Scale(i) - Xhat2(1)*Xhat2(2));
+    Phat3 = (eye(3) - Kgain2*H2)*Phat2;
+    
+    H3 = [0,ST*Xhat3(3)/Xhat3(2)/Xhat3(2),-ST/Xhat3(2)];
+    Kgain3 = Phat3 * H3.' / (H3*Phat3*H3.'+R2*2);
 
+    % update 3
+    Xnew =  Xhat3 + Kgain3*( dScale(i) - 1 + Xhat3(3)/Xhat2(3)*ST);
+    Pnew = (eye(3) - Kgain3*H3)*Phat3;
+    
     
     X(:,i) = Xnew;
     P(:,:,i) = Pnew;
     KG(:,1,i)=Kgain;
-    %KG(:,2,i)=Kgain2;
+    KG(:,2,i)=Kgain2;
 end
 
 
@@ -144,15 +159,7 @@ legend('EKF','Stereo Only','Ground Truth');
 
 %%
 figure(7)
-title('KalmanGain')
 plot(t,squeeze(KG(:,1,:)),'-',t,squeeze(KG(:,2,:)),'--')
 xlabel('time [s]')
 ylabel('speed of depth [m/s]')
-grid on
-
-figure(8)
-title('Cov')
-plot(t,squeeze(P(1,1,:)),'-',t,squeeze(P(2,2,:)),'--',t,squeeze(P(3,3,:)),'-.')
-xlabel('time [s]')
-ylabel('Covariance')
 grid on

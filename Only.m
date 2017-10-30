@@ -104,9 +104,9 @@ for i=2:length(t)
     H2 = [0 1/Z0 0];
     
     
-    Kgain = Phat * H2.' / (H2*Phat*H2.'+R2);
+    Kgain = Phat * H2.' / (H2*Phat*H2.'+R2/INFF);
     % update 2
-    Xnew =  Xhat + Kgain*(1/Scale(i) - Xhat(1)*Xhat(2));
+    Xnew =  Xhat + Kgain*(1/Scale(i) - 1/Z0 *Xhat(2));
     Pnew = (eye(3) - Kgain*H2)*Phat;
 
     

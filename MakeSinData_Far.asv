@@ -10,10 +10,9 @@ MONO_NOISE_S = 1; % 1?? sigma for monocular distance estimation noise
 t = (0:ST:END).'; %time 
 len = size(t,1);
 freq =0.4;
-Z = 0.3 + 0.1*sin(2*pi*freq*t);% 300mm +- 100mm
+Z = 0.4 + 0.1*sin(2*pi*freq*t);% 300mm +- 100mm
 VZ = 2*pi*freq*0.1*cos(2*pi*freq*t);
-Z = 0.8 - 0.1*t;% 300mm +- 100mm
-VZ = -0.1+0*t;
+
 
 %% Noisy Observation 
 BF = 0.065*400; % base line * focal length

@@ -41,14 +41,13 @@ for i=2:length(t)
     Xhat2 =  Xhat + Kgain*(mDisp(i) - BF_/Xhat(2));
     Phat2 = (eye(3) - Kgain*H1)*Phat ;
 
-    % KF gain2
-%     if mDisp(i)== INFF
-%         H2 = [0 Xhat2(1) 0];
-%     else
-%         H2 = [Xhat2(2) Xhat2(1) 0];
-%     end
-    H2 = [Xhat2(2) Xhat2(1) 0];
-%     H2 = [0 1/Z0 0];
+    if mDisp(i)== INFF
+        R2_=R2/100;
+        H2 = [0 Xhat2(1) 0];
+    else
+        R2_=R2;
+        H2 = [Xhat2(2) Xhat2(1) 0];    
+    end
     
     
     Kgain2 = Phat2 * H2.' / (H2*Phat2*H2.'+R2_);

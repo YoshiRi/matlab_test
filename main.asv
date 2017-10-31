@@ -1,0 +1,12 @@
+%% main
+close all 
+clear all
+
+%% make data
+% make line motion
+MakeData.m
+% make sin motion
+%MakeSinData;
+
+%% EKF estimation and show
+Only2D

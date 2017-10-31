@@ -12,18 +12,17 @@ len = size(t,1);
 freq =0.4;
 Z = 0.3 + 0.1*sin(2*pi*freq*t);% 300mm +- 100mm
 VZ = 2*pi*freq*0.1*cos(2*pi*freq*t);
-Z = 0.8 - 0.1*t;% 300mm +- 100mm
-VZ = -0.1+0*t;
+
 
 %% Noisy Observation 
 BF = 0.065*400; % base line * focal length
 StereoNoise = STEREO_NOISE_S * randn(length(t),1);
 Disp = BF./Z + StereoNoise;
-
+Zlim = 0.3;
 
 mDisp = Disp;
 INFF = 1000000000;
-mDisp(mDisp>BF/0.275) = INFF;
+mDisp(mDisp>BF/Zlim) = INFF;
 
 figure(1);
 plot(t,Z)

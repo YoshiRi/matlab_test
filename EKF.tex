@@ -5,7 +5,7 @@
 
 
 % Inherit from the specified cell style.
-
+﻿
 
 
 
@@ -51,8 +51,6 @@
     }
     \usepackage{upquote} % Upright quotes for verbatim code
     \usepackage{eurosym} % defines \euro
-    \usepackage[mathletters]{ucs} % Extended unicode (utf-8) support
-    \usepackage[utf8x]{inputenc} % Allow utf-8 characters in the tex document
     \usepackage{fancyvrb} % verbatim replacement that allows latex
     \usepackage{grffile} % extends the file name processing of package graphics 
                          % to support a larger range 
@@ -159,73 +157,73 @@
     \PY@it{\PY@bf{\PY@ff{#1}}}}}}}
 \def\PY#1#2{\PY@reset\PY@toks#1+\relax+\PY@do{#2}}
 
-\expandafter\def\csname PY@tok@nf\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
-\expandafter\def\csname PY@tok@gt\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.27,0.87}{##1}}}
 \expandafter\def\csname PY@tok@s1\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
-\expandafter\def\csname PY@tok@mo\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
-\expandafter\def\csname PY@tok@nv\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
-\expandafter\def\csname PY@tok@gh\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.50}{##1}}}
 \expandafter\def\csname PY@tok@ge\endcsname{\let\PY@it=\textit}
-\expandafter\def\csname PY@tok@mh\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
-\expandafter\def\csname PY@tok@kr\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
-\expandafter\def\csname PY@tok@vi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
-\expandafter\def\csname PY@tok@sx\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
-\expandafter\def\csname PY@tok@sb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
-\expandafter\def\csname PY@tok@bp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
-\expandafter\def\csname PY@tok@il\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
-\expandafter\def\csname PY@tok@kc\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
-\expandafter\def\csname PY@tok@nd\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.67,0.13,1.00}{##1}}}
-\expandafter\def\csname PY@tok@go\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.53,0.53,0.53}{##1}}}
-\expandafter\def\csname PY@tok@gd\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.63,0.00,0.00}{##1}}}
-\expandafter\def\csname PY@tok@ni\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.60,0.60,0.60}{##1}}}
-\expandafter\def\csname PY@tok@ne\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.82,0.25,0.23}{##1}}}
-\expandafter\def\csname PY@tok@nt\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
-\expandafter\def\csname PY@tok@k\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
-\expandafter\def\csname PY@tok@gu\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.50,0.00,0.50}{##1}}}
-\expandafter\def\csname PY@tok@kp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
-\expandafter\def\csname PY@tok@c1\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
-\expandafter\def\csname PY@tok@cp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.74,0.48,0.00}{##1}}}
-\expandafter\def\csname PY@tok@m\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
-\expandafter\def\csname PY@tok@ch\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
-\expandafter\def\csname PY@tok@vm\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
-\expandafter\def\csname PY@tok@na\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.49,0.56,0.16}{##1}}}
-\expandafter\def\csname PY@tok@cpf\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
-\expandafter\def\csname PY@tok@nl\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.63,0.63,0.00}{##1}}}
-\expandafter\def\csname PY@tok@vg\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
-\expandafter\def\csname PY@tok@gi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.63,0.00}{##1}}}
-\expandafter\def\csname PY@tok@sd\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
-\expandafter\def\csname PY@tok@gp\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.50}{##1}}}
-\expandafter\def\csname PY@tok@vc\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
-\expandafter\def\csname PY@tok@c\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
-\expandafter\def\csname PY@tok@mb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
-\expandafter\def\csname PY@tok@mf\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
-\expandafter\def\csname PY@tok@w\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.73,0.73}{##1}}}
-\expandafter\def\csname PY@tok@kt\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.69,0.00,0.25}{##1}}}
-\expandafter\def\csname PY@tok@ss\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
-\expandafter\def\csname PY@tok@o\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
-\expandafter\def\csname PY@tok@kn\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
-\expandafter\def\csname PY@tok@no\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.53,0.00,0.00}{##1}}}
-\expandafter\def\csname PY@tok@s2\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
-\expandafter\def\csname PY@tok@kd\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
-\expandafter\def\csname PY@tok@nc\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
-\expandafter\def\csname PY@tok@ow\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.67,0.13,1.00}{##1}}}
 \expandafter\def\csname PY@tok@s\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
-\expandafter\def\csname PY@tok@si\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.53}{##1}}}
-\expandafter\def\csname PY@tok@se\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.13}{##1}}}
-\expandafter\def\csname PY@tok@sc\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
-\expandafter\def\csname PY@tok@mi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
-\expandafter\def\csname PY@tok@gr\endcsname{\def\PY@tc##1{\textcolor[rgb]{1.00,0.00,0.00}{##1}}}
-\expandafter\def\csname PY@tok@err\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\fcolorbox[rgb]{1.00,0.00,0.00}{1,1,1}{\strut ##1}}}
-\expandafter\def\csname PY@tok@cm\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
-\expandafter\def\csname PY@tok@fm\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
-\expandafter\def\csname PY@tok@sa\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
-\expandafter\def\csname PY@tok@sr\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.53}{##1}}}
-\expandafter\def\csname PY@tok@sh\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@gu\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.50,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@ne\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.82,0.25,0.23}{##1}}}
 \expandafter\def\csname PY@tok@nn\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
-\expandafter\def\csname PY@tok@gs\endcsname{\let\PY@bf=\textbf}
-\expandafter\def\csname PY@tok@nb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@vc\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@kp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nl\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.63,0.63,0.00}{##1}}}
+\expandafter\def\csname PY@tok@k\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@mf\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@sh\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@vm\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@no\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.53,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nd\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.67,0.13,1.00}{##1}}}
 \expandafter\def\csname PY@tok@dl\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@gt\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.27,0.87}{##1}}}
+\expandafter\def\csname PY@tok@nv\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@nc\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@bp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@vg\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@ow\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.67,0.13,1.00}{##1}}}
+\expandafter\def\csname PY@tok@gp\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@ch\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@sr\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.53}{##1}}}
+\expandafter\def\csname PY@tok@gd\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.63,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@sb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@kd\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@cm\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@gi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.63,0.00}{##1}}}
+\expandafter\def\csname PY@tok@o\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@sc\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@cp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.74,0.48,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nt\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@go\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.53,0.53,0.53}{##1}}}
+\expandafter\def\csname PY@tok@kc\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@mi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@err\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\fcolorbox[rgb]{1.00,0.00,0.00}{1,1,1}{\strut ##1}}}
+\expandafter\def\csname PY@tok@kt\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.69,0.00,0.25}{##1}}}
+\expandafter\def\csname PY@tok@ni\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.60,0.60,0.60}{##1}}}
+\expandafter\def\csname PY@tok@si\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.53}{##1}}}
+\expandafter\def\csname PY@tok@fm\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@ss\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@w\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.73,0.73}{##1}}}
+\expandafter\def\csname PY@tok@nf\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@gs\endcsname{\let\PY@bf=\textbf}
+\expandafter\def\csname PY@tok@kn\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
 \expandafter\def\csname PY@tok@cs\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@gr\endcsname{\def\PY@tc##1{\textcolor[rgb]{1.00,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@se\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.13}{##1}}}
+\expandafter\def\csname PY@tok@vi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@kr\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@il\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@nb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@s2\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@mh\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@na\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.49,0.56,0.16}{##1}}}
+\expandafter\def\csname PY@tok@m\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@c1\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@c\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@cpf\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@sd\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@mo\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@mb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@sx\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@gh\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@sa\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
 
 \def\PYZbs{\char`\\}
 \def\PYZus{\char`\_}
@@ -270,6 +268,22 @@
     
     \geometry{verbose,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in}
     
+\newcommand{\bm}[1]{{\bf #1}}
+\newcommand{\eq}[1]{Eq.(\ref{eq:#1})}
+\newcommand{\zu}[1]{図\ref{fig:#1}}
+\newcommand{\shiki}[1]{式(\ref{eq:#1})}
+\newcommand{\fig}[1]{Fig.\ \ref{fig:#1}}
+\newcommand{\grp}[1]{Fig.\ \ref{grp:#1}}
+\newcommand{\tab}[1]{Table\ \ref{tab:#1}}
+\newcommand{\defeq}{:=}
+\newcommand{\tvec}[1]{\bvec{#1}^{\mathsf{T}}} 
+\newcommand{\mr}[1]{\mathrm{#1}}%rm体
+\newcommand{\ml}[1]{\mathcal{#1}}%frac体
+\newcommand{\bmat}[1]{\begin{bmatrix} #1 \end{bmatrix}}%行列簡略化
+\newcommand{\pmat}[1]{\begin{pmatrix} #1 \end{pmatrix}}%行列簡略化
+\newcommand{\mat}[1]{\left( \begin{matrix} #1 \end{matrix} \right)}%行列簡略化
+%\newcommand{\nom}[1]{ \ml{N} \{ 0,\sigma_{ #1 } \} }
+\newcommand{\expo}[1]{ \mathrm{e}^{#1} }
     
 
     \begin{document}
@@ -280,25 +294,71 @@
     
 
     
-    \section{EKF 2D \&3D fusion その２}\label{ekf-2d-3d-fusion-ux305dux306e}
 
-EKFの枠組みを用いてステレオカメラからの視差情報と単眼で追ったテンプレートのスケーリング変化の情報をセンサフュージョンする
-プログラムを書いた。
-サンプリング時間STを\(33\)ms，シミュレーション時間を\(5\)sとする。
+\section{Stereo + Monocular Depth Estimation}
+自動運転に限らずカメラを用いた物体の位置認識はロボティクスにおいて重要である。
+目的：ステレオカメラ単体で目的とする物体の位置や速度を精度良く測る。
+
+\begin{itemize}
+\item
+  ステレオ距離測定の問題点
+  視差を用いているので，差異のわかりづらい，テクスチャの無い箇所からは信用に足るデータを得られない。また，対象が近すぎる場合は位置を推定できない。
+  私の手持ちのカメラの場合は50cmより近い所は測れない。
+\item
+  単眼の問題点 2次元情報のため，絶対的なスケールがわからない。
+\end{itemize}
+
+-\/- アプローチ
+ステレオ距離情報と単眼の拡大縮小情報を適宜組み合わせる手法を考える。
+
+\subsection{Previous research}\label{previous-research}
+
+近頃は画像＋レーダーという組み合わせが多々見られる。
+ステレオ+画像はいくつかあるが，スケールに着目したものは無さそう。
+\#\#\#\# Object Distance Estimation Based on Stereo Vision and Color
+Segmentation with Region Matching
+https://link.springer.com/content/pdf/10.1007\%2F978-3-642-17277-9\_38.pdf
+
+\subsection{EKFでの推定式}\label{ekfux3067ux306eux63a8ux5b9aux5f0f}
+
+測定したいのは距離\(Z\)とその速度，それと2次元から3次元へのスケーリング\(\lambda\)である。従って，状態変数を次のように置く。
+\(\bm{X}= \mat{\lambda \\ Z \\ \dot{Z}}\)
+ここで\(\lambda=\frac{1}{Z_0}\)とする。
+
+システムの更新式は \[
+\dfrac{d}{dt}\mat{\lambda \\ Z \\ \dot{Z}}=\mat{1&0&0\\0&0&1\\0&0&0} \mat{\lambda \\ Z \\ \dot{Z}} + \mat{0 \\ 0\\ 1} \bm{\omega}
+\]
+システムノイズ\(\omega\)は観測対象に入るランダムな加速度とする。これで推定するとノイズ有りのカルマンフィルタっぽくなるっぽい？
+
+これをサンプリング\(\Delta t\)で離散化する。 \[
+\mat{\lambda_{n+1}\\ Z_{n+1} \\ \dot{Z}_{n+1}}=\mat{1&0&0\\0&1&\Delta t\\0&0&1} \mat{\lambda_{n}\\ Z_{n} \\ \dot{Z}_{n}} + \mat{0 \\ 0\\ \Delta t}  \bm{\omega}
+\]
+
+観測としてまずステレオの視差\(D_n\) が考えられる。 \[
+D_n = h_1(\lambda_{n},Z_{n} , \dot{Z}_{n})=\frac{BF}{Z_n} + \omega_{h1}
+\]
+また，二次元のスケーリング（近い物体ほど大きく見える）も同様な観測として考えられる。
+\[
+scale^{-1} = h_2(\lambda_{n},Z_{n} , \dot{Z}_{n})= \lambda_n Z_n + \omega_{h2}
+\] これらを用いてEKFの式を建てて計算する。
+状態変数\(\bm{X}_n\)でこれらの観測方程式を偏微分すると，次のように表せる。
+\[
+\dfrac{dh_1}{d\bm{X}_n} =\mat{0 & -\dfrac{BF}{Z_n^2} &0}\\
+\dfrac{dh_2}{d\bm{X}_n} =\mat{Z_n & \lambda_n &0}
+\]
+
+    \section{シミュレーション}\label{ux30b7ux30dfux30e5ux30ecux30fcux30b7ux30e7ux30f3}
+
+サンプリング33msでシミュレーションします。
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}15}]:} \PY{n}{clear} \PY{n}{all}
-         \PY{n}{close} \PY{n}{all}
-         
-         \PY{n}{set}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,} \PY{l+s}{\PYZsq{}}\PY{l+s}{DefaultLineLineWidth\PYZsq{}}\PY{p}{,} \PY{l+m+mi}{2}\PY{p}{)} 
-         
-         \PY{c}{\PYZpc{}\PYZpc{} config}
-         \PY{c}{\PYZpc{}true depth}
-         \PY{c}{\PYZpc{} sampling time }
-         \PY{n}{ST} \PY{p}{=} \PY{l+m+mf}{0.033} \PY{c}{\PYZpc{}33ms}
-         \PY{n}{END} \PY{p}{=} \PY{l+m+mf}{5.0} \PY{c}{\PYZpc{} 5sec simulation}
-         \PY{n}{STEREO\PYZus{}NOISE\PYZus{}S} \PY{p}{=} \PY{l+m+mi}{1}\PY{p}{;} \PY{c}{\PYZpc{} 1px sigma for stereo disparity noise}
-         \PY{n}{MONO\PYZus{}NOISE\PYZus{}S} \PY{p}{=} \PY{l+m+mi}{1}\PY{p}{;} \PY{c}{\PYZpc{} 1?? sigma for monocular distance estimation noise}
+{\color{incolor}In [{\color{incolor}2}]:} \PY{c}{\PYZpc{}\PYZpc{} config}
+        \PY{c}{\PYZpc{}true depth}
+        \PY{c}{\PYZpc{} sampling time }
+        \PY{n}{ST} \PY{p}{=} \PY{l+m+mf}{0.033} \PY{c}{\PYZpc{}33ms}
+        \PY{n}{END} \PY{p}{=} \PY{l+m+mf}{5.0} \PY{c}{\PYZpc{} 5sec simulation}
+        \PY{n}{STEREO\PYZus{}NOISE\PYZus{}S} \PY{p}{=} \PY{l+m+mi}{1}\PY{p}{;} \PY{c}{\PYZpc{} 1px sigma for stereo disparity noise}
+        \PY{n}{MONO\PYZus{}NOISE\PYZus{}S} \PY{p}{=} \PY{l+m+mi}{1}\PY{p}{;} \PY{c}{\PYZpc{} 1?? sigma for monocular distance estimation noise}
 \end{Verbatim}
 
 
@@ -322,11 +382,12 @@ END =
 対象は最初\(30\)cmの距離にあり，振幅\(10\)cmかつ\(1\)Hzで振動するとする。
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}21}]:} \PY{c}{\PYZpc{}\PYZpc{} make ground truth data }
-         \PY{n}{t} \PY{p}{=} \PY{p}{(}\PY{l+m+mi}{0}\PY{p}{:}\PY{n}{ST}\PY{p}{:}\PY{n}{END}\PY{p}{)}\PY{p}{.}\PY{o}{\PYZsq{}}\PY{p}{;} \PY{c}{\PYZpc{}time }
-         \PY{n}{freq} \PY{p}{=}\PY{l+m+mf}{0.4}\PY{p}{;}
-         \PY{n}{Z} \PY{p}{=} \PY{l+m+mf}{0.3} \PY{o}{+} \PY{l+m+mf}{0.1}\PY{o}{*}\PY{n+nb}{sin}\PY{p}{(}\PY{l+m+mi}{2}\PY{o}{*}\PY{n+nb}{pi}\PY{o}{*}\PY{n}{freq}\PY{o}{*}\PY{n}{t}\PY{p}{)}\PY{p}{;}\PY{c}{\PYZpc{} 300mm +\PYZhy{} 100mm}
-         \PY{c}{\PYZpc{} Z = 0.7 \PYZhy{} 0.1*t;\PYZpc{} 300mm +\PYZhy{} 100mm}
+{\color{incolor}In [{\color{incolor}3}]:} \PY{c}{\PYZpc{}\PYZpc{} make ground truth data }
+        \PY{n}{t} \PY{p}{=} \PY{p}{(}\PY{l+m+mi}{0}\PY{p}{:}\PY{n}{ST}\PY{p}{:}\PY{n}{END}\PY{p}{)}\PY{p}{.}\PY{o}{\PYZsq{}}\PY{p}{;} \PY{c}{\PYZpc{}time }
+        \PY{n}{len} \PY{p}{=} \PY{n+nb}{size}\PY{p}{(}\PY{n}{t}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{)}\PY{p}{;}
+        \PY{n}{freq} \PY{p}{=}\PY{l+m+mf}{0.4}\PY{p}{;}
+        \PY{n}{Z} \PY{p}{=} \PY{l+m+mf}{0.3} \PY{o}{+} \PY{l+m+mf}{0.1}\PY{o}{*}\PY{n+nb}{sin}\PY{p}{(}\PY{l+m+mi}{2}\PY{o}{*}\PY{n+nb}{pi}\PY{o}{*}\PY{n}{freq}\PY{o}{*}\PY{n}{t}\PY{p}{)}\PY{p}{;}\PY{c}{\PYZpc{} 300mm +\PYZhy{} 100mm}
+        \PY{n}{VZ} \PY{p}{=} \PY{l+m+mi}{2}\PY{o}{*}\PY{n+nb}{pi}\PY{o}{*}\PY{n}{freq}\PY{o}{*}\PY{l+m+mf}{0.1}\PY{o}{*}\PY{n+nb}{cos}\PY{p}{(}\PY{l+m+mi}{2}\PY{o}{*}\PY{n+nb}{pi}\PY{o}{*}\PY{n}{freq}\PY{o}{*}\PY{n}{t}\PY{p}{)}\PY{p}{;}
 \end{Verbatim}
 
 
@@ -349,10 +410,22 @@ Disp=\frac{BF}{Z}
 実際ステレオ距離計測でも近いほどノイズが小さく，遠いほど計測が不確実になる。
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}22}]:} \PY{c}{\PYZpc{}\PYZpc{} Noisy Observation }
-         \PY{n}{BF} \PY{p}{=} \PY{l+m+mf}{0.065}\PY{o}{*}\PY{l+m+mi}{400}\PY{p}{;} \PY{c}{\PYZpc{} base line * focal length}
-         \PY{n}{StereoNoise} \PY{p}{=} \PY{n}{STEREO\PYZus{}NOISE\PYZus{}S} \PY{o}{*} \PY{n+nb}{randn}\PY{p}{(}\PY{n+nb}{length}\PY{p}{(}\PY{n}{t}\PY{p}{)}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{)}\PY{p}{;}
-         \PY{n}{Disp} \PY{p}{=} \PY{n}{BF}\PY{o}{./}\PY{n}{Z} \PY{o}{+} \PY{n}{StereoNoise}\PY{p}{;}
+{\color{incolor}In [{\color{incolor}4}]:} \PY{c}{\PYZpc{}\PYZpc{} Noisy Observation }
+        \PY{n}{BF} \PY{p}{=} \PY{l+m+mf}{0.065}\PY{o}{*}\PY{l+m+mi}{400}\PY{p}{;} \PY{c}{\PYZpc{} base line * focal length}
+        \PY{n}{StereoNoise} \PY{p}{=} \PY{n}{STEREO\PYZus{}NOISE\PYZus{}S} \PY{o}{*} \PY{n+nb}{randn}\PY{p}{(}\PY{n+nb}{length}\PY{p}{(}\PY{n}{t}\PY{p}{)}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{)}\PY{p}{;}
+        \PY{n}{Disp} \PY{p}{=} \PY{n}{BF}\PY{o}{./}\PY{n}{Z} \PY{o}{+} \PY{n}{StereoNoise}\PY{p}{;}
+        \PY{n}{Zlim} \PY{p}{=} \PY{l+m+mf}{0.3}\PY{p}{;}
+        
+        \PY{n}{mDisp} \PY{p}{=} \PY{n}{Disp}\PY{p}{;}
+        \PY{n}{INFF} \PY{p}{=} \PY{l+m+mi}{1000000000}\PY{p}{;}
+        \PY{n}{mDisp}\PY{p}{(}\PY{n}{mDisp}\PY{o}{\PYZgt{}}\PY{n}{BF}\PY{o}{/}\PY{n}{Zlim}\PY{p}{)} \PY{p}{=} \PY{n}{INFF}\PY{p}{;}
+        
+        \PY{n}{figure}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{)}\PY{p}{;}
+        \PY{n}{plot}\PY{p}{(}\PY{n}{t}\PY{p}{,}\PY{n}{Z}\PY{p}{)}
+        \PY{n}{title}\PY{p}{(}\PY{l+s}{\PYZsq{}}\PY{l+s}{GroundTruthDepth\PYZsq{}}\PY{p}{)}
+        \PY{n}{xlabel}\PY{p}{(}\PY{l+s}{\PYZsq{}}\PY{l+s}{time [s]\PYZsq{}}\PY{p}{)}
+        \PY{n}{ylabel}\PY{p}{(}\PY{l+s}{\PYZsq{}}\PY{l+s}{Object Depth [m]\PYZsq{}}\PY{p}{)}
+        \PY{n}{grid} \PY{n}{on}\PY{p}{;}
 \end{Verbatim}
 
 
@@ -361,70 +434,38 @@ Disp=\frac{BF}{Z}
 
     \end{Verbatim}
 
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{EKF_files/EKF_6_1.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
     なお，今回は距離\(Z\)が25cmより近い時にステレオカメラが距離を測れないことを模擬する。
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}23}]:} \PY{n}{mDisp} \PY{p}{=} \PY{n}{Disp}\PY{p}{;}
-         \PY{n}{INFF} \PY{p}{=} \PY{l+m+mi}{1000000000}\PY{p}{;}
-         \PY{n}{mDisp}\PY{p}{(}\PY{n}{mDisp}\PY{o}{\PYZgt{}}\PY{n}{BF}\PY{o}{/}\PY{l+m+mf}{0.275}\PY{p}{)} \PY{p}{=} \PY{n}{INFF}\PY{p}{;}
-\end{Verbatim}
-
-
-    \begin{Verbatim}[commandchars=\\\{\}]
-
-
-    \end{Verbatim}
-
-    ここまでの結果を図示してみよう。
-
-    \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}24}]:} \PY{n}{figure}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{)}\PY{p}{;}
-         \PY{n}{plot}\PY{p}{(}\PY{n}{t}\PY{p}{,}\PY{n}{Z}\PY{p}{)}
-         \PY{n}{title}\PY{p}{(}\PY{l+s}{\PYZsq{}}\PY{l+s}{GroundTruthDepth\PYZsq{}}\PY{p}{)}
-         \PY{n}{xlabel}\PY{p}{(}\PY{l+s}{\PYZsq{}}\PY{l+s}{time [s]\PYZsq{}}\PY{p}{)}
-         \PY{n}{ylabel}\PY{p}{(}\PY{l+s}{\PYZsq{}}\PY{l+s}{Object Depth [m]\PYZsq{}}\PY{p}{)}
-         \PY{n}{grid} \PY{n}{on}\PY{p}{;}
-         \PY{n}{figure}\PY{p}{(}\PY{l+m+mi}{2}\PY{p}{)}
-         \PY{n}{plot}\PY{p}{(}\PY{n}{t}\PY{p}{,}\PY{n}{BF}\PY{o}{./}\PY{n}{mDisp}\PY{p}{,}\PY{l+s}{\PYZsq{}}\PY{l+s}{r\PYZsq{}}\PY{p}{,}\PY{n}{t}\PY{p}{,}\PY{n}{Z}\PY{p}{,}\PY{l+s}{\PYZsq{}}\PY{l+s}{b\PYZhy{}\PYZhy{}\PYZsq{}}\PY{p}{)}
-         \PY{n}{title}\PY{p}{(}\PY{l+s}{\PYZsq{}}\PY{l+s}{Estimated Depth\PYZsq{}}\PY{p}{)}
-         \PY{n}{xlabel}\PY{p}{(}\PY{l+s}{\PYZsq{}}\PY{l+s}{time [s]\PYZsq{}}\PY{p}{)}
-         \PY{n}{ylabel}\PY{p}{(}\PY{l+s}{\PYZsq{}}\PY{l+s}{Depth [m]\PYZsq{}}\PY{p}{)}
-         \PY{n}{legend}\PY{p}{(}\PY{l+s}{\PYZsq{}}\PY{l+s}{measured\PYZsq{}}\PY{p}{,}\PY{l+s}{\PYZsq{}}\PY{l+s}{ground truth\PYZsq{}}\PY{p}{)}
-         \PY{n}{grid} \PY{n}{on}\PY{p}{;}
-\end{Verbatim}
-
-
-    \begin{Verbatim}[commandchars=\\\{\}]
-
-
-    \end{Verbatim}
-
-    \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{EKF_files/EKF_9_1.png}
-    \end{center}
-    { \hspace*{\fill} \\}
-    
-    \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{EKF_files/EKF_9_2.png}
-    \end{center}
-    { \hspace*{\fill} \\}
-    
-    このようにある程度距離が近いとステレオカメラでは有効な距離を検出できない。
-\# 2D スケーリングの観測
-スケーリング\(s\)は距離\(Z\)と定数\(Z_0\)を用いて次のように計算することができる。
-\[
-s=\frac{Z_0}{Z}
-\]
-ここで\(Z_0\)は元のテンプレートと全く同じ大きさの画像が見れる時の距離である。
-これに対して適切なノイズを設定するのは難しいが，仮にテンプレートを正方形と仮定してその1片の長さにガウシアンノイズをかけたようになるようなノイズを考えている。（本質的な問題では無いのかもしれない）
-
-    \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}25}]:} \PY{c}{\PYZpc{}\PYZpc{} Noisy Monocluar Obserbation}
-         \PY{n}{Z0} \PY{p}{=} \PY{l+m+mf}{0.3} \PY{c}{\PYZpc{} the real distance template is taken}
-         \PY{n}{IMG\PYZus{}SIZE} \PY{p}{=} \PY{l+m+mi}{300}\PY{o}{/}\PY{l+m+mi}{2}\PY{c}{\PYZpc{} 300 times 300 pix template}
-         \PY{n}{MonoNoise} \PY{p}{=} \PY{n}{MONO\PYZus{}NOISE\PYZus{}S}\PY{o}{*}\PY{n+nb}{randn}\PY{p}{(}\PY{n+nb}{length}\PY{p}{(}\PY{n}{t}\PY{p}{)}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{)}\PY{p}{;} \PY{c}{\PYZpc{} sigma = 1px image noise }
-         \PY{n}{Snoise} \PY{p}{=} \PY{l+m+mf}{2.}\PY{o}{/}\PY{p}{(}\PY{n}{Z0}\PY{o}{./}\PY{n}{Z} \PY{o}{*} \PY{n}{IMG\PYZus{}SIZE}\PY{p}{)}\PY{o}{.*} \PY{n}{MonoNoise}\PY{p}{;}
-         \PY{n}{Scale} \PY{p}{=} \PY{n}{Z0}\PY{o}{./}\PY{n}{Z} \PY{o}{+} \PY{n}{Snoise}\PY{p}{;}
+{\color{incolor}In [{\color{incolor}5}]:} \PY{c}{\PYZpc{}\PYZpc{} Noisy Monocluar Obserbation}
+        \PY{n}{Z0} \PY{p}{=} \PY{l+m+mf}{0.3} \PY{c}{\PYZpc{} the real distance template is taken}
+        \PY{n}{IMG\PYZus{}SIZE} \PY{p}{=} \PY{l+m+mi}{600}\PY{o}{/}\PY{l+m+mi}{2}\PY{c}{\PYZpc{} 300 times 300 pix template}
+        \PY{n}{MonoNoise} \PY{p}{=} \PY{n}{MONO\PYZus{}NOISE\PYZus{}S}\PY{o}{*}\PY{n+nb}{randn}\PY{p}{(}\PY{n+nb}{length}\PY{p}{(}\PY{n}{t}\PY{p}{)}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{)}\PY{p}{;} \PY{c}{\PYZpc{} sigma = 1px image noise }
+        \PY{n}{Snoise} \PY{p}{=} \PY{l+m+mf}{2.}\PY{o}{/}\PY{p}{(}\PY{n}{Z0}\PY{o}{./}\PY{n}{Z} \PY{o}{*} \PY{n}{IMG\PYZus{}SIZE}\PY{p}{)}\PY{o}{.*} \PY{n}{MonoNoise}\PY{p}{;}
+        \PY{n}{Scale} \PY{p}{=} \PY{n}{Z0}\PY{o}{./}\PY{n}{Z} \PY{o}{+} \PY{n}{Snoise}\PY{p}{;}
+        \PY{n}{dScale} \PY{p}{=} \PY{p}{[}\PY{l+m+mi}{1}\PY{p}{;} \PY{n}{Scale}\PY{p}{(}\PY{l+m+mi}{2}\PY{p}{:}\PY{n+nb}{length}\PY{p}{(}\PY{n}{t}\PY{p}{)}\PY{p}{)}\PY{o}{./}\PY{n}{Scale}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{:}\PY{n+nb}{length}\PY{p}{(}\PY{n}{t}\PY{p}{)}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{)}\PY{p}{]}\PY{p}{;}
+        
+        \PY{n}{figure}\PY{p}{(}\PY{l+m+mi}{2}\PY{p}{)}
+        \PY{n}{plot}\PY{p}{(}\PY{n}{t}\PY{p}{,}\PY{n}{BF}\PY{o}{./}\PY{n}{mDisp}\PY{p}{,}\PY{l+s}{\PYZsq{}}\PY{l+s}{r\PYZsq{}}\PY{p}{,}\PY{n}{t}\PY{p}{,}\PY{n}{Z0}\PY{o}{./}\PY{n}{Scale}\PY{p}{,}\PY{l+s}{\PYZsq{}}\PY{l+s}{m\PYZhy{}\PYZhy{}\PYZsq{}}\PY{p}{,}\PY{n}{t}\PY{p}{,}\PY{n}{Z}\PY{p}{,}\PY{l+s}{\PYZsq{}}\PY{l+s}{b\PYZhy{}.\PYZsq{}}\PY{p}{)}
+        \PY{n}{title}\PY{p}{(}\PY{l+s}{\PYZsq{}}\PY{l+s}{Estimated Depth\PYZsq{}}\PY{p}{)}
+        \PY{n}{xlabel}\PY{p}{(}\PY{l+s}{\PYZsq{}}\PY{l+s}{time [s]\PYZsq{}}\PY{p}{)}
+        \PY{n}{ylabel}\PY{p}{(}\PY{l+s}{\PYZsq{}}\PY{l+s}{Depth [m]\PYZsq{}}\PY{p}{)}
+        \PY{n}{legend}\PY{p}{(}\PY{l+s}{\PYZsq{}}\PY{l+s}{3D measured\PYZsq{}}\PY{p}{,}\PY{l+s}{\PYZsq{}}\PY{l+s}{2D measured\PYZsq{}}\PY{p}{,}\PY{l+s}{\PYZsq{}}\PY{l+s}{ground truth\PYZsq{}}\PY{p}{)}
+        \PY{n}{grid} \PY{n}{on}\PY{p}{;}
+        
+        
+        \PY{n}{figure}\PY{p}{(}\PY{l+m+mi}{3}\PY{p}{)}\PY{p}{;}
+        \PY{n}{plot}\PY{p}{(}\PY{n}{t}\PY{p}{,}\PY{n}{Scale}\PY{p}{,}\PY{l+s}{\PYZsq{}}\PY{l+s}{r\PYZsq{}}\PY{p}{,}\PY{n}{t}\PY{p}{,}\PY{n}{Z0}\PY{o}{./}\PY{n}{Z}\PY{p}{,}\PY{l+s}{\PYZsq{}}\PY{l+s}{b\PYZhy{}\PYZhy{}\PYZsq{}}\PY{p}{)}
+        \PY{n}{title}\PY{p}{(}\PY{l+s}{\PYZsq{}}\PY{l+s}{Estimated Scaling\PYZsq{}}\PY{p}{)}
+        \PY{n}{xlabel}\PY{p}{(}\PY{l+s}{\PYZsq{}}\PY{l+s}{time [s]\PYZsq{}}\PY{p}{)}
+        \PY{n}{ylabel}\PY{p}{(}\PY{l+s}{\PYZsq{}}\PY{l+s}{Scaling\PYZsq{}}\PY{p}{)}
+        \PY{n}{legend}\PY{p}{(}\PY{l+s}{\PYZsq{}}\PY{l+s}{measured\PYZsq{}}\PY{p}{,}\PY{l+s}{\PYZsq{}}\PY{l+s}{ground truth\PYZsq{}}\PY{p}{)}
+        \PY{n}{grid} \PY{n}{on}\PY{p}{;}
 \end{Verbatim}
 
 
@@ -437,22 +478,91 @@ Z0 =
 
 IMG\_SIZE =
 
-   150
+   300
 
 
 
     \end{Verbatim}
 
-    こちらも結果を図示しよう。ステレオの時と同じく，テンプレートが近いほど誤差が小さくなるようになっているはずである。
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{EKF_files/EKF_8_1.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{EKF_files/EKF_8_2.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    これらのデータからEKF推定をする。
+
+\subsection{ステレオ推定のみの場合}\label{ux30b9ux30c6ux30ecux30aaux63a8ux5b9aux306eux307fux306eux5834ux5408}
+
+ステレオの推定のみの場合のシミュレーションを以下に示す。
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}26}]:} \PY{n}{figure}\PY{p}{(}\PY{l+m+mi}{3}\PY{p}{)}\PY{p}{;}
-         \PY{n}{plot}\PY{p}{(}\PY{n}{t}\PY{p}{,}\PY{n}{Scale}\PY{p}{,}\PY{l+s}{\PYZsq{}}\PY{l+s}{r\PYZsq{}}\PY{p}{,}\PY{n}{t}\PY{p}{,}\PY{n}{Z0}\PY{o}{./}\PY{n}{Z}\PY{p}{,}\PY{l+s}{\PYZsq{}}\PY{l+s}{b\PYZhy{}\PYZhy{}\PYZsq{}}\PY{p}{)}
-         \PY{n}{title}\PY{p}{(}\PY{l+s}{\PYZsq{}}\PY{l+s}{Estimated Scaling\PYZsq{}}\PY{p}{)}
-         \PY{n}{xlabel}\PY{p}{(}\PY{l+s}{\PYZsq{}}\PY{l+s}{time [s]\PYZsq{}}\PY{p}{)}
-         \PY{n}{ylabel}\PY{p}{(}\PY{l+s}{\PYZsq{}}\PY{l+s}{Scaling\PYZsq{}}\PY{p}{)}
-         \PY{n}{legend}\PY{p}{(}\PY{l+s}{\PYZsq{}}\PY{l+s}{measured\PYZsq{}}\PY{p}{,}\PY{l+s}{\PYZsq{}}\PY{l+s}{ground truth\PYZsq{}}\PY{p}{)}
-         \PY{n}{grid} \PY{n}{on}\PY{p}{;}
+{\color{incolor}In [{\color{incolor}6}]:} \PY{c}{\PYZpc{}\PYZpc{} system matrix}
+        \PY{n}{A} \PY{p}{=} \PY{p}{[} \PY{l+m+mi}{1}\PY{p}{,}\PY{l+m+mi}{0}\PY{p}{,}\PY{l+m+mi}{0}\PY{p}{;}\PY{l+m+mi}{0}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{,}\PY{n}{ST}\PY{p}{;}\PY{l+m+mi}{0}\PY{p}{,}\PY{l+m+mi}{0}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{;}
+        \PY{n}{B} \PY{p}{=} \PY{p}{[}\PY{l+m+mi}{0}\PY{p}{;} \PY{n}{ST}\PYZca{}\PY{l+m+mi}{2}\PY{o}{/}\PY{l+m+mi}{2}\PY{p}{;} \PY{n}{ST}\PY{p}{]}\PY{p}{;}
+        \PY{n}{Q} \PY{p}{=} \PY{n}{B}\PY{o}{*}\PY{n}{B}\PY{p}{.}\PY{o}{\PYZsq{}}\PY{p}{;}
+        \PY{c}{\PYZpc{} Measurment Covariance}
+        \PY{n}{R1} \PY{p}{=} \PY{n}{STEREO\PYZus{}NOISE\PYZus{}S} \PY{o}{*} \PY{l+m+mi}{1}\PY{p}{;}
+        \PY{n}{R2} \PY{p}{=} \PY{l+m+mf}{0.5}\PY{p}{;}
+        
+        \PY{c}{\PYZpc{}\PYZpc{} init}
+        \PY{n}{Pinit} \PY{p}{=} \PY{n+nb}{diag}\PY{p}{(}\PY{p}{[}\PY{l+m+mi}{100}\PY{p}{,}\PY{l+m+mi}{100}\PY{p}{,}\PY{l+m+mi}{100}\PY{p}{]}\PY{p}{)}\PY{p}{;}
+        \PY{n}{lam0} \PY{p}{=} \PY{l+m+mi}{1}\PY{o}{/}\PY{n}{Scale}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{)}\PY{o}{/}\PY{n}{Z}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{)}\PY{p}{;}
+        \PY{n}{Xinit} \PY{p}{=} \PY{p}{[}\PY{n}{lam0} \PY{n}{Z}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{)} \PY{n}{VZ}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{)}\PY{p}{]}\PY{p}{;}
+        
+        \PY{n}{P} \PY{p}{=} \PY{n+nb}{zeros}\PY{p}{(}\PY{l+m+mi}{3}\PY{p}{,}\PY{l+m+mi}{3}\PY{p}{,}\PY{n+nb}{length}\PY{p}{(}\PY{n}{t}\PY{p}{)}\PY{p}{)}\PY{p}{;}
+        \PY{n}{X} \PY{p}{=} \PY{n+nb}{zeros}\PY{p}{(}\PY{l+m+mi}{3}\PY{p}{,}\PY{n+nb}{length}\PY{p}{(}\PY{n}{t}\PY{p}{)}\PY{p}{)}\PY{p}{;}
+        \PY{n}{KG} \PY{p}{=} \PY{n+nb}{zeros}\PY{p}{(}\PY{l+m+mi}{3}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{,}\PY{n+nb}{length}\PY{p}{(}\PY{n}{t}\PY{p}{)}\PY{p}{)}\PY{p}{;}
+        \PY{n}{P}\PY{p}{(}\PY{p}{:}\PY{p}{,}\PY{p}{:}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{)} \PY{p}{=} \PY{n}{Pinit}\PY{p}{;}
+        \PY{n}{X}\PY{p}{(}\PY{p}{:}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{)} \PY{p}{=} \PY{n}{Xinit}\PY{p}{;}
+        
+        
+        \PY{c}{\PYZpc{}\PYZpc{}}
+        \PY{n}{BF\PYZus{}} \PY{p}{=} \PY{n}{BF}\PY{p}{;}
+        \PY{k}{for} \PY{n+nb}{i}\PY{p}{=}\PY{l+m+mi}{2}\PY{p}{:}\PY{n+nb}{length}\PY{p}{(}\PY{n}{t}\PY{p}{)}
+            \PY{c}{\PYZpc{} Estimate}
+            \PY{n}{Xhat} \PY{p}{=} \PY{n}{A} \PY{o}{*} \PY{n}{X}\PY{p}{(}\PY{p}{:}\PY{p}{,}\PY{n+nb}{i}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{)}\PY{p}{;}
+            \PY{n}{Phat} \PY{p}{=} \PY{n}{A}\PY{o}{*}\PY{n}{P}\PY{p}{(}\PY{p}{:}\PY{p}{,}\PY{p}{:}\PY{p}{,}\PY{n+nb}{i}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{)}\PY{o}{*}\PY{n}{A}\PY{p}{.}\PY{o}{\PYZsq{}} \PY{o}{+} \PY{n}{Q}\PY{p}{;}
+        
+            
+            
+            
+            \PY{c}{\PYZpc{} Switch value}
+            \PY{k}{if} \PY{n}{mDisp}\PY{p}{(}\PY{n+nb}{i}\PY{p}{)}\PY{o}{==} \PY{n}{INFF}
+                \PY{n}{R1\PYZus{}} \PY{p}{=} \PY{n}{INFF}\PY{o}{*}\PY{n}{INFF}\PY{p}{;} \PY{n}{mD}\PY{p}{=}\PY{l+m+mi}{0}\PY{p}{;}
+            \PY{k}{else}
+                \PY{n}{R1\PYZus{}} \PY{p}{=} \PY{n}{R1}\PY{p}{;} \PY{n}{mD} \PY{p}{=} \PY{n}{mDisp}\PY{p}{(}\PY{n+nb}{i}\PY{p}{)}\PY{p}{;}        
+            \PY{k}{end}
+            \PY{n}{H1} \PY{p}{=} \PY{p}{[}\PY{l+m+mi}{0} \PY{o}{\PYZhy{}}\PY{n}{BF\PYZus{}}\PY{o}{/}\PY{n}{Xhat}\PY{p}{(}\PY{l+m+mi}{2}\PY{p}{)}\PY{o}{/}\PY{n}{Xhat}\PY{p}{(}\PY{l+m+mi}{2}\PY{p}{)} \PY{l+m+mi}{0}\PY{p}{]}\PY{p}{;}
+            \PY{c}{\PYZpc{}H1 = [0 \PYZhy{}mD/Xhat(2) 0];}
+            \PY{c}{\PYZpc{}H1 = [0 \PYZhy{}mD\PYZca{}2/BF\PYZus{} 0];}
+            
+            \PY{c}{\PYZpc{} KF gain}
+            \PY{n}{Kgain} \PY{p}{=} \PY{n}{Phat} \PY{o}{*} \PY{n}{H1}\PY{p}{.}\PY{o}{\PYZsq{}} \PY{o}{/} \PY{p}{(}\PY{n}{H1}\PY{o}{*}\PY{n}{Phat}\PY{o}{*}\PY{n}{H1}\PY{p}{.}\PY{o}{\PYZsq{}}\PY{o}{+}\PY{n}{R1\PYZus{}}\PY{p}{)}\PY{p}{;}
+            \PY{c}{\PYZpc{} update}
+            \PY{n}{Xnew} \PY{p}{=}  \PY{n}{Xhat} \PY{o}{+} \PY{n}{Kgain}\PY{o}{*}\PY{p}{(}\PY{n}{mDisp}\PY{p}{(}\PY{n+nb}{i}\PY{p}{)} \PY{o}{\PYZhy{}} \PY{n}{BF\PYZus{}}\PY{o}{/}\PY{n}{Xhat}\PY{p}{(}\PY{l+m+mi}{2}\PY{p}{)}\PY{p}{)}\PY{p}{;}
+            \PY{n}{Pnew} \PY{p}{=} \PY{p}{(}\PY{n+nb}{eye}\PY{p}{(}\PY{l+m+mi}{3}\PY{p}{)} \PY{o}{\PYZhy{}} \PY{n}{Kgain}\PY{o}{*}\PY{n}{H1}\PY{p}{)}\PY{o}{*}\PY{n}{Phat} \PY{p}{;}
+        
+            
+            \PY{n}{X}\PY{p}{(}\PY{p}{:}\PY{p}{,}\PY{n+nb}{i}\PY{p}{)} \PY{p}{=} \PY{n}{Xnew}\PY{p}{;}
+            \PY{n}{P}\PY{p}{(}\PY{p}{:}\PY{p}{,}\PY{p}{:}\PY{p}{,}\PY{n+nb}{i}\PY{p}{)} \PY{p}{=} \PY{n}{Pnew}\PY{p}{;}
+            \PY{n}{KG}\PY{p}{(}\PY{p}{:}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{,}\PY{n+nb}{i}\PY{p}{)}\PY{p}{=}\PY{n}{Kgain}\PY{p}{;}
+            \PY{c}{\PYZpc{}KG(:,2,i)=Kgain2;}
+        \PY{k}{end}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+
+
+    \end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}8}]:} \PY{n}{showResult}
 \end{Verbatim}
 
 
@@ -462,41 +572,441 @@ IMG\_SIZE =
     \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{EKF_files/EKF_13_1.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{EKF_files/EKF_11_1.png}
     \end{center}
     { \hspace*{\fill} \\}
     
-    \section{EKFを用いたセンサフュージョン}\label{ekfux3092ux7528ux3044ux305fux30bbux30f3ux30b5ux30d5ux30e5ux30fcux30b8ux30e7ux30f3}
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{EKF_files/EKF_11_2.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{EKF_files/EKF_11_3.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{EKF_files/EKF_11_4.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{EKF_files/EKF_11_5.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    上から共分散，カルマンゲイン，速度，距離，スケーリングの推定である。
 
-今，我々は以下の2つのZに関する式を持っている。この2つの要素からZを測る手法を考える。
+カルマンフィルタはノイズを平滑化できるが，情報のない区間は等速運動として推定してしまう。
 
-\begin{align}
-Disp_n&=\frac{BF}{Z_n}\\
-s_n &= \frac{Z_0}{Z_n}
-\end{align}
+\subsection{2Dスケーリングのみの観測}\label{dux30b9ux30b1ux30fcux30eaux30f3ux30b0ux306eux307fux306eux89b3ux6e2c}
 
-今，カメラが静止しているとして次のようなあれやそれがあるとする。
+2Dスケール情報を用いた修正には問題が存在する。本来一定量である\(Z_0\)と変化量である\(Z_n\)とを同様に更新するため，単独で用いた場合にはどちらの変数も同時に変更してしまう。
+とりあえず結果を見てみよう。
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}14}]:} 
+{\color{incolor}In [{\color{incolor}9}]:} \PY{c}{\PYZpc{}\PYZpc{} system matrix}
+        \PY{n}{A} \PY{p}{=} \PY{p}{[} \PY{l+m+mi}{1}\PY{p}{,}\PY{l+m+mi}{0}\PY{p}{,}\PY{l+m+mi}{0}\PY{p}{;}\PY{l+m+mi}{0}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{,}\PY{n}{ST}\PY{p}{;}\PY{l+m+mi}{0}\PY{p}{,}\PY{l+m+mi}{0}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{;}
+        \PY{n}{B} \PY{p}{=} \PY{p}{[}\PY{l+m+mi}{0}\PY{p}{;} \PY{n}{ST}\PYZca{}\PY{l+m+mi}{2}\PY{o}{/}\PY{l+m+mi}{2}\PY{p}{;} \PY{n}{ST}\PY{p}{]}\PY{p}{;}
+        \PY{n}{Q} \PY{p}{=} \PY{n}{B}\PY{o}{*}\PY{n}{B}\PY{p}{.}\PY{o}{\PYZsq{}}\PY{p}{;}
+        \PY{c}{\PYZpc{} Measurment Covariance}
+        \PY{n}{R1} \PY{p}{=} \PY{n}{STEREO\PYZus{}NOISE\PYZus{}S}\PY{p}{;}
+        \PY{n}{R2} \PY{p}{=} \PY{l+m+mf}{0.005}\PY{p}{;}
+        
+        \PY{c}{\PYZpc{}\PYZpc{} init}
+        \PY{n}{Pinit} \PY{p}{=} \PY{n+nb}{diag}\PY{p}{(}\PY{p}{[}\PY{l+m+mi}{100}\PY{p}{,}\PY{l+m+mi}{100}\PY{p}{,}\PY{l+m+mi}{100}\PY{p}{]}\PY{p}{)}\PY{p}{;}
+        \PY{n}{lam0} \PY{p}{=} \PY{l+m+mi}{1}\PY{o}{/}\PY{n}{Scale}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{)}\PY{o}{/}\PY{n}{Z}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{)}\PY{p}{;}
+        \PY{n}{Xinit} \PY{p}{=} \PY{p}{[}\PY{n}{lam0} \PY{n}{Z}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{)} \PY{n}{VZ}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{)}\PY{p}{]}\PY{p}{;}
+        
+        \PY{n}{P} \PY{p}{=} \PY{n+nb}{zeros}\PY{p}{(}\PY{l+m+mi}{3}\PY{p}{,}\PY{l+m+mi}{3}\PY{p}{,}\PY{n+nb}{length}\PY{p}{(}\PY{n}{t}\PY{p}{)}\PY{p}{)}\PY{p}{;}
+        \PY{n}{X} \PY{p}{=} \PY{n+nb}{zeros}\PY{p}{(}\PY{l+m+mi}{3}\PY{p}{,}\PY{n+nb}{length}\PY{p}{(}\PY{n}{t}\PY{p}{)}\PY{p}{)}\PY{p}{;}
+        \PY{n}{KG} \PY{p}{=} \PY{n+nb}{zeros}\PY{p}{(}\PY{l+m+mi}{3}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{,}\PY{n+nb}{length}\PY{p}{(}\PY{n}{t}\PY{p}{)}\PY{p}{)}\PY{p}{;}
+        \PY{n}{P}\PY{p}{(}\PY{p}{:}\PY{p}{,}\PY{p}{:}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{)} \PY{p}{=} \PY{n}{Pinit}\PY{p}{;}
+        \PY{n}{X}\PY{p}{(}\PY{p}{:}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{)} \PY{p}{=} \PY{n}{Xinit}\PY{p}{;}
+        
+        
+        \PY{c}{\PYZpc{}\PYZpc{}}
+        \PY{n}{BF\PYZus{}} \PY{p}{=} \PY{n}{BF}\PY{p}{;}
+        \PY{k}{for} \PY{n+nb}{i}\PY{p}{=}\PY{l+m+mi}{2}\PY{p}{:}\PY{n+nb}{length}\PY{p}{(}\PY{n}{t}\PY{p}{)}
+            \PY{c}{\PYZpc{} Estimate}
+            \PY{n}{Xhat} \PY{p}{=} \PY{n}{A} \PY{o}{*} \PY{n}{X}\PY{p}{(}\PY{p}{:}\PY{p}{,}\PY{n+nb}{i}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{)}\PY{p}{;}
+            \PY{n}{Phat} \PY{p}{=} \PY{n}{A}\PY{o}{*}\PY{n}{P}\PY{p}{(}\PY{p}{:}\PY{p}{,}\PY{p}{:}\PY{p}{,}\PY{n+nb}{i}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{)}\PY{o}{*}\PY{n}{A}\PY{p}{.}\PY{o}{\PYZsq{}} \PY{o}{+} \PY{n}{Q}\PY{p}{;}
+        
+            
+            
+            
+            \PY{c}{\PYZpc{} Switch value}
+            \PY{k}{if} \PY{n}{mDisp}\PY{p}{(}\PY{n+nb}{i}\PY{p}{)}\PY{o}{==} \PY{n}{INFF}
+                \PY{n}{R1\PYZus{}} \PY{p}{=} \PY{n}{INFF}\PY{o}{*}\PY{n}{INFF}\PY{p}{;} \PY{n}{mD}\PY{p}{=}\PY{l+m+mi}{0}\PY{p}{;}
+            \PY{k}{else}
+                \PY{n}{R1\PYZus{}} \PY{p}{=} \PY{n}{R1}\PY{p}{;} \PY{n}{mD} \PY{p}{=} \PY{n}{mDisp}\PY{p}{(}\PY{n+nb}{i}\PY{p}{)}\PY{p}{;}        
+            \PY{k}{end}
+            \PY{c}{\PYZpc{}H1 = [0 \PYZhy{}BF\PYZus{}/Xhat(2)/Xhat(2) 0];}
+            \PY{c}{\PYZpc{}H1 = [0 \PYZhy{}mD/Xhat(2) 0];}
+            \PY{c}{\PYZpc{}H1 = [0 \PYZhy{}mD\PYZca{}2/BF\PYZus{} 0];}
+        
+            \PY{n}{H2} \PY{p}{=} \PY{p}{[}\PY{n}{Xhat}\PY{p}{(}\PY{l+m+mi}{2}\PY{p}{)} \PY{n}{Xhat}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{)} \PY{l+m+mi}{0}\PY{p}{]}\PY{p}{;}
+            
+            
+            \PY{n}{Kgain} \PY{p}{=} \PY{n}{Phat} \PY{o}{*} \PY{n}{H2}\PY{p}{.}\PY{o}{\PYZsq{}} \PY{o}{/} \PY{p}{(}\PY{n}{H2}\PY{o}{*}\PY{n}{Phat}\PY{o}{*}\PY{n}{H2}\PY{p}{.}\PY{o}{\PYZsq{}}\PY{o}{+}\PY{n}{R2}\PY{o}{/}\PY{l+m+mi}{10000}\PY{p}{)}\PY{p}{;}
+            \PY{c}{\PYZpc{} update 2}
+            \PY{n}{Xnew} \PY{p}{=}  \PY{n}{Xhat} \PY{o}{+} \PY{n}{Kgain}\PY{o}{*}\PY{p}{(}\PY{l+m+mi}{1}\PY{o}{/}\PY{n}{Scale}\PY{p}{(}\PY{n+nb}{i}\PY{p}{)} \PY{o}{\PYZhy{}} \PY{n}{Xhat}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{)} \PY{o}{*}\PY{n}{Xhat}\PY{p}{(}\PY{l+m+mi}{2}\PY{p}{)}\PY{p}{)}\PY{p}{;}
+            \PY{n}{Pnew} \PY{p}{=} \PY{p}{(}\PY{n+nb}{eye}\PY{p}{(}\PY{l+m+mi}{3}\PY{p}{)} \PY{o}{\PYZhy{}} \PY{n}{Kgain}\PY{o}{*}\PY{n}{H2}\PY{p}{)}\PY{o}{*}\PY{n}{Phat}\PY{p}{;}
+        
+            
+            \PY{n}{X}\PY{p}{(}\PY{p}{:}\PY{p}{,}\PY{n+nb}{i}\PY{p}{)} \PY{p}{=} \PY{n}{Xnew}\PY{p}{;}
+            \PY{n}{P}\PY{p}{(}\PY{p}{:}\PY{p}{,}\PY{p}{:}\PY{p}{,}\PY{n+nb}{i}\PY{p}{)} \PY{p}{=} \PY{n}{Pnew}\PY{p}{;}
+            \PY{n}{KG}\PY{p}{(}\PY{p}{:}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{,}\PY{n+nb}{i}\PY{p}{)}\PY{p}{=}\PY{n}{Kgain}\PY{p}{;}
+            \PY{c}{\PYZpc{}KG(:,2,i)=Kgain2;}
+        \PY{k}{end}
 \end{Verbatim}
 
 
     \begin{Verbatim}[commandchars=\\\{\}]
-
-ans =
-
-     0     0
-     0     0
-
 
 
     \end{Verbatim}
 
+    こちらも結果を図示しよう。
+上から共分散，カルマンゲイン，速度，距離，スケーリングの推定である。
+カルマンフィルタはノイズを平滑化できるのは同様だが，Zの推定と同時に一定量であるはずのスケーリングも変更してしまう。
+
+ステレオの更新がない場合は\(\lambda\)をただの定数として，
+次のようにしたほうが良さそう。 \[
+scale^{-1} = h_2'(\lambda_{n},Z_{n} , \dot{Z}_{n})= \lambda Z_n + \omega_{h2}\\
+\dfrac{dh_2'}{d\bm{X}_n} =\mat{0 & \hat{\lambda} &0}
+\]
+
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor} }]:} 
+{\color{incolor}In [{\color{incolor}10}]:} \PY{c}{\PYZpc{}\PYZpc{} figure}
+         \PY{n}{showResult}
 \end{Verbatim}
 
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+
+
+    \end{Verbatim}
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{EKF_files/EKF_15_1.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{EKF_files/EKF_15_2.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{EKF_files/EKF_15_3.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{EKF_files/EKF_15_4.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{EKF_files/EKF_15_5.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \subsection{観測ノイズと位相遅れに関する考察}\label{ux89b3ux6e2cux30ceux30a4ux30baux3068ux4f4dux76f8ux9045ux308cux306bux95a2ux3059ux308bux8003ux5bdf}
+
+修正した2Dスケーリングの観測において，観測ノイズ\(R_2\)を大きく取ると観測のノイズを大きく推定するためにローパスのようなフィルタ効果が強くかかる。従って次のように位相遅れが大きくなる。
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}11}]:} \PY{c}{\PYZpc{}\PYZpc{} system matrix}
+         \PY{n}{A} \PY{p}{=} \PY{p}{[} \PY{l+m+mi}{1}\PY{p}{,}\PY{l+m+mi}{0}\PY{p}{,}\PY{l+m+mi}{0}\PY{p}{;}\PY{l+m+mi}{0}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{,}\PY{n}{ST}\PY{p}{;}\PY{l+m+mi}{0}\PY{p}{,}\PY{l+m+mi}{0}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{;}
+         \PY{n}{B} \PY{p}{=} \PY{p}{[}\PY{l+m+mi}{0}\PY{p}{;} \PY{n}{ST}\PYZca{}\PY{l+m+mi}{2}\PY{o}{/}\PY{l+m+mi}{2}\PY{p}{;} \PY{n}{ST}\PY{p}{]}\PY{p}{;}
+         \PY{n}{Q} \PY{p}{=} \PY{n}{B}\PY{o}{*}\PY{n}{B}\PY{p}{.}\PY{o}{\PYZsq{}}\PY{p}{;}
+         \PY{c}{\PYZpc{} Measurment Covariance}
+         \PY{n}{R1} \PY{p}{=} \PY{n}{STEREO\PYZus{}NOISE\PYZus{}S}\PY{p}{;}
+         \PY{n}{R2} \PY{p}{=} \PY{l+m+mi}{5}\PY{p}{;}
+         
+         \PY{c}{\PYZpc{}\PYZpc{} init}
+         \PY{n}{Pinit} \PY{p}{=} \PY{n+nb}{diag}\PY{p}{(}\PY{p}{[}\PY{l+m+mi}{100}\PY{p}{,}\PY{l+m+mi}{100}\PY{p}{,}\PY{l+m+mi}{100}\PY{p}{]}\PY{p}{)}\PY{p}{;}
+         \PY{n}{lam0} \PY{p}{=} \PY{l+m+mi}{1}\PY{o}{/}\PY{n}{Scale}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{)}\PY{o}{/}\PY{n}{Z}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{)}\PY{p}{;}
+         \PY{n}{Xinit} \PY{p}{=} \PY{p}{[}\PY{n}{lam0} \PY{n}{Z}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{)} \PY{n}{VZ}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{)}\PY{p}{]}\PY{p}{;}
+         
+         \PY{n}{P} \PY{p}{=} \PY{n+nb}{zeros}\PY{p}{(}\PY{l+m+mi}{3}\PY{p}{,}\PY{l+m+mi}{3}\PY{p}{,}\PY{n+nb}{length}\PY{p}{(}\PY{n}{t}\PY{p}{)}\PY{p}{)}\PY{p}{;}
+         \PY{n}{X} \PY{p}{=} \PY{n+nb}{zeros}\PY{p}{(}\PY{l+m+mi}{3}\PY{p}{,}\PY{n+nb}{length}\PY{p}{(}\PY{n}{t}\PY{p}{)}\PY{p}{)}\PY{p}{;}
+         \PY{n}{KG} \PY{p}{=} \PY{n+nb}{zeros}\PY{p}{(}\PY{l+m+mi}{3}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{,}\PY{n+nb}{length}\PY{p}{(}\PY{n}{t}\PY{p}{)}\PY{p}{)}\PY{p}{;}
+         \PY{n}{P}\PY{p}{(}\PY{p}{:}\PY{p}{,}\PY{p}{:}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{)} \PY{p}{=} \PY{n}{Pinit}\PY{p}{;}
+         \PY{n}{X}\PY{p}{(}\PY{p}{:}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{)} \PY{p}{=} \PY{n}{Xinit}\PY{p}{;}
+         
+         
+         \PY{c}{\PYZpc{}\PYZpc{}}
+         \PY{n}{BF\PYZus{}} \PY{p}{=} \PY{n}{BF}\PY{p}{;}
+         \PY{k}{for} \PY{n+nb}{i}\PY{p}{=}\PY{l+m+mi}{2}\PY{p}{:}\PY{n+nb}{length}\PY{p}{(}\PY{n}{t}\PY{p}{)}
+             \PY{c}{\PYZpc{} Estimate}
+             \PY{n}{Xhat} \PY{p}{=} \PY{n}{A} \PY{o}{*} \PY{n}{X}\PY{p}{(}\PY{p}{:}\PY{p}{,}\PY{n+nb}{i}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{)}\PY{p}{;}
+             \PY{n}{Phat} \PY{p}{=} \PY{n}{A}\PY{o}{*}\PY{n}{P}\PY{p}{(}\PY{p}{:}\PY{p}{,}\PY{p}{:}\PY{p}{,}\PY{n+nb}{i}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{)}\PY{o}{*}\PY{n}{A}\PY{p}{.}\PY{o}{\PYZsq{}} \PY{o}{+} \PY{n}{Q}\PY{p}{;}
+             
+             \PY{c}{\PYZpc{} Switch value}
+             \PY{k}{if} \PY{n}{mDisp}\PY{p}{(}\PY{n+nb}{i}\PY{p}{)}\PY{o}{==} \PY{n}{INFF}
+                 \PY{n}{R1\PYZus{}} \PY{p}{=} \PY{n}{INFF}\PY{o}{*}\PY{n}{INFF}\PY{p}{;} \PY{n}{mD}\PY{p}{=}\PY{l+m+mi}{0}\PY{p}{;}
+             \PY{k}{else}
+                 \PY{n}{R1\PYZus{}} \PY{p}{=} \PY{n}{R1}\PY{p}{;} \PY{n}{mD} \PY{p}{=} \PY{n}{mDisp}\PY{p}{(}\PY{n+nb}{i}\PY{p}{)}\PY{p}{;}        
+             \PY{k}{end}
+             \PY{c}{\PYZpc{}H1 = [0 \PYZhy{}BF\PYZus{}/Xhat(2)/Xhat(2) 0];}
+             \PY{c}{\PYZpc{}H1 = [0 \PYZhy{}mD/Xhat(2) 0];}
+             \PY{n}{H1} \PY{p}{=} \PY{p}{[}\PY{l+m+mi}{0} \PY{o}{\PYZhy{}}\PY{n}{mD}\PYZca{}\PY{l+m+mi}{2}\PY{o}{/}\PY{n}{BF\PYZus{}} \PY{l+m+mi}{0}\PY{p}{]}\PY{p}{;}
+         
+             \PY{n}{H2} \PY{p}{=} \PY{p}{[}\PY{l+m+mi}{0} \PY{l+m+mi}{1}\PY{o}{/}\PY{n}{Z0} \PY{l+m+mi}{0}\PY{p}{]}\PY{p}{;}
+             
+             
+             \PY{n}{Kgain} \PY{p}{=} \PY{n}{Phat} \PY{o}{*} \PY{n}{H2}\PY{p}{.}\PY{o}{\PYZsq{}} \PY{o}{/} \PY{p}{(}\PY{n}{H2}\PY{o}{*}\PY{n}{Phat}\PY{o}{*}\PY{n}{H2}\PY{p}{.}\PY{o}{\PYZsq{}}\PY{o}{+}\PY{n}{R2}\PY{p}{)}\PY{p}{;}
+             \PY{c}{\PYZpc{} update 2}
+             \PY{n}{Xnew} \PY{p}{=}  \PY{n}{Xhat} \PY{o}{+} \PY{n}{Kgain}\PY{o}{*}\PY{p}{(}\PY{l+m+mi}{1}\PY{o}{/}\PY{n}{Scale}\PY{p}{(}\PY{n+nb}{i}\PY{p}{)} \PY{o}{\PYZhy{}} \PY{l+m+mi}{1}\PY{o}{/}\PY{n}{Z0} \PY{o}{*}\PY{n}{Xhat}\PY{p}{(}\PY{l+m+mi}{2}\PY{p}{)}\PY{p}{)}\PY{p}{;}
+             \PY{n}{Pnew} \PY{p}{=} \PY{p}{(}\PY{n+nb}{eye}\PY{p}{(}\PY{l+m+mi}{3}\PY{p}{)} \PY{o}{\PYZhy{}} \PY{n}{Kgain}\PY{o}{*}\PY{n}{H2}\PY{p}{)}\PY{o}{*}\PY{n}{Phat}\PY{p}{;}
+         
+             
+             \PY{n}{X}\PY{p}{(}\PY{p}{:}\PY{p}{,}\PY{n+nb}{i}\PY{p}{)} \PY{p}{=} \PY{n}{Xnew}\PY{p}{;}
+             \PY{n}{P}\PY{p}{(}\PY{p}{:}\PY{p}{,}\PY{p}{:}\PY{p}{,}\PY{n+nb}{i}\PY{p}{)} \PY{p}{=} \PY{n}{Pnew}\PY{p}{;}
+             \PY{n}{KG}\PY{p}{(}\PY{p}{:}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{,}\PY{n+nb}{i}\PY{p}{)}\PY{p}{=}\PY{n}{Kgain}\PY{p}{;}
+             \PY{c}{\PYZpc{}KG(:,2,i)=Kgain2;}
+         \PY{k}{end}
+         
+         
+         \PY{c}{\PYZpc{}\PYZpc{} figure}
+         \PY{n}{showResult}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+
+
+    \end{Verbatim}
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{EKF_files/EKF_17_1.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{EKF_files/EKF_17_2.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{EKF_files/EKF_17_3.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{EKF_files/EKF_17_4.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{EKF_files/EKF_17_5.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    一方で観測誤差を小さくすると位相遅れの効果を小さくすることができるが特に速度の観測がNoisyになる。
+\(R_2 = 0.0005\)
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}12}]:} \PY{c}{\PYZpc{}\PYZpc{} system matrix}
+         \PY{n}{A} \PY{p}{=} \PY{p}{[} \PY{l+m+mi}{1}\PY{p}{,}\PY{l+m+mi}{0}\PY{p}{,}\PY{l+m+mi}{0}\PY{p}{;}\PY{l+m+mi}{0}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{,}\PY{n}{ST}\PY{p}{;}\PY{l+m+mi}{0}\PY{p}{,}\PY{l+m+mi}{0}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{;}
+         \PY{n}{B} \PY{p}{=} \PY{p}{[}\PY{l+m+mi}{0}\PY{p}{;} \PY{n}{ST}\PYZca{}\PY{l+m+mi}{2}\PY{o}{/}\PY{l+m+mi}{2}\PY{p}{;} \PY{n}{ST}\PY{p}{]}\PY{p}{;}
+         \PY{n}{Q} \PY{p}{=} \PY{n}{B}\PY{o}{*}\PY{n}{B}\PY{p}{.}\PY{o}{\PYZsq{}}\PY{p}{;}
+         \PY{c}{\PYZpc{} Measurment Covariance}
+         \PY{n}{R1} \PY{p}{=} \PY{n}{STEREO\PYZus{}NOISE\PYZus{}S}\PY{p}{;}
+         \PY{n}{R2} \PY{p}{=} \PY{l+m+mf}{0.0005}\PY{p}{;}
+         
+         \PY{c}{\PYZpc{}\PYZpc{} init}
+         \PY{n}{Pinit} \PY{p}{=} \PY{n+nb}{diag}\PY{p}{(}\PY{p}{[}\PY{l+m+mi}{100}\PY{p}{,}\PY{l+m+mi}{100}\PY{p}{,}\PY{l+m+mi}{100}\PY{p}{]}\PY{p}{)}\PY{p}{;}
+         \PY{n}{lam0} \PY{p}{=} \PY{l+m+mi}{1}\PY{o}{/}\PY{n}{Scale}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{)}\PY{o}{/}\PY{n}{Z}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{)}\PY{p}{;}
+         \PY{n}{Xinit} \PY{p}{=} \PY{p}{[}\PY{n}{lam0} \PY{n}{Z}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{)} \PY{n}{VZ}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{)}\PY{p}{]}\PY{p}{;}
+         
+         \PY{n}{P} \PY{p}{=} \PY{n+nb}{zeros}\PY{p}{(}\PY{l+m+mi}{3}\PY{p}{,}\PY{l+m+mi}{3}\PY{p}{,}\PY{n+nb}{length}\PY{p}{(}\PY{n}{t}\PY{p}{)}\PY{p}{)}\PY{p}{;}
+         \PY{n}{X} \PY{p}{=} \PY{n+nb}{zeros}\PY{p}{(}\PY{l+m+mi}{3}\PY{p}{,}\PY{n+nb}{length}\PY{p}{(}\PY{n}{t}\PY{p}{)}\PY{p}{)}\PY{p}{;}
+         \PY{n}{KG} \PY{p}{=} \PY{n+nb}{zeros}\PY{p}{(}\PY{l+m+mi}{3}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{,}\PY{n+nb}{length}\PY{p}{(}\PY{n}{t}\PY{p}{)}\PY{p}{)}\PY{p}{;}
+         \PY{n}{P}\PY{p}{(}\PY{p}{:}\PY{p}{,}\PY{p}{:}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{)} \PY{p}{=} \PY{n}{Pinit}\PY{p}{;}
+         \PY{n}{X}\PY{p}{(}\PY{p}{:}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{)} \PY{p}{=} \PY{n}{Xinit}\PY{p}{;}
+         
+         
+         \PY{c}{\PYZpc{}\PYZpc{}}
+         \PY{n}{BF\PYZus{}} \PY{p}{=} \PY{n}{BF}\PY{p}{;}
+         \PY{k}{for} \PY{n+nb}{i}\PY{p}{=}\PY{l+m+mi}{2}\PY{p}{:}\PY{n+nb}{length}\PY{p}{(}\PY{n}{t}\PY{p}{)}
+             \PY{c}{\PYZpc{} Estimate}
+             \PY{n}{Xhat} \PY{p}{=} \PY{n}{A} \PY{o}{*} \PY{n}{X}\PY{p}{(}\PY{p}{:}\PY{p}{,}\PY{n+nb}{i}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{)}\PY{p}{;}
+             \PY{n}{Phat} \PY{p}{=} \PY{n}{A}\PY{o}{*}\PY{n}{P}\PY{p}{(}\PY{p}{:}\PY{p}{,}\PY{p}{:}\PY{p}{,}\PY{n+nb}{i}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{)}\PY{o}{*}\PY{n}{A}\PY{p}{.}\PY{o}{\PYZsq{}} \PY{o}{+} \PY{n}{Q}\PY{p}{;}
+             
+             \PY{c}{\PYZpc{} Switch value}
+             \PY{k}{if} \PY{n}{mDisp}\PY{p}{(}\PY{n+nb}{i}\PY{p}{)}\PY{o}{==} \PY{n}{INFF}
+                 \PY{n}{R1\PYZus{}} \PY{p}{=} \PY{n}{INFF}\PY{o}{*}\PY{n}{INFF}\PY{p}{;} \PY{n}{mD}\PY{p}{=}\PY{l+m+mi}{0}\PY{p}{;}
+             \PY{k}{else}
+                 \PY{n}{R1\PYZus{}} \PY{p}{=} \PY{n}{R1}\PY{p}{;} \PY{n}{mD} \PY{p}{=} \PY{n}{mDisp}\PY{p}{(}\PY{n+nb}{i}\PY{p}{)}\PY{p}{;}        
+             \PY{k}{end}
+             \PY{c}{\PYZpc{}H1 = [0 \PYZhy{}BF\PYZus{}/Xhat(2)/Xhat(2) 0];}
+             \PY{c}{\PYZpc{}H1 = [0 \PYZhy{}mD/Xhat(2) 0];}
+             \PY{n}{H1} \PY{p}{=} \PY{p}{[}\PY{l+m+mi}{0} \PY{o}{\PYZhy{}}\PY{n}{mD}\PYZca{}\PY{l+m+mi}{2}\PY{o}{/}\PY{n}{BF\PYZus{}} \PY{l+m+mi}{0}\PY{p}{]}\PY{p}{;}
+         
+             \PY{n}{H2} \PY{p}{=} \PY{p}{[}\PY{l+m+mi}{0} \PY{l+m+mi}{1}\PY{o}{/}\PY{n}{Z0} \PY{l+m+mi}{0}\PY{p}{]}\PY{p}{;}
+             
+             
+             \PY{n}{Kgain} \PY{p}{=} \PY{n}{Phat} \PY{o}{*} \PY{n}{H2}\PY{p}{.}\PY{o}{\PYZsq{}} \PY{o}{/} \PY{p}{(}\PY{n}{H2}\PY{o}{*}\PY{n}{Phat}\PY{o}{*}\PY{n}{H2}\PY{p}{.}\PY{o}{\PYZsq{}}\PY{o}{+}\PY{n}{R2}\PY{p}{)}\PY{p}{;}
+             \PY{c}{\PYZpc{} update 2}
+             \PY{n}{Xnew} \PY{p}{=}  \PY{n}{Xhat} \PY{o}{+} \PY{n}{Kgain}\PY{o}{*}\PY{p}{(}\PY{l+m+mi}{1}\PY{o}{/}\PY{n}{Scale}\PY{p}{(}\PY{n+nb}{i}\PY{p}{)} \PY{o}{\PYZhy{}} \PY{l+m+mi}{1}\PY{o}{/}\PY{n}{Z0} \PY{o}{*}\PY{n}{Xhat}\PY{p}{(}\PY{l+m+mi}{2}\PY{p}{)}\PY{p}{)}\PY{p}{;}
+             \PY{n}{Pnew} \PY{p}{=} \PY{p}{(}\PY{n+nb}{eye}\PY{p}{(}\PY{l+m+mi}{3}\PY{p}{)} \PY{o}{\PYZhy{}} \PY{n}{Kgain}\PY{o}{*}\PY{n}{H2}\PY{p}{)}\PY{o}{*}\PY{n}{Phat}\PY{p}{;}
+         
+             
+             \PY{n}{X}\PY{p}{(}\PY{p}{:}\PY{p}{,}\PY{n+nb}{i}\PY{p}{)} \PY{p}{=} \PY{n}{Xnew}\PY{p}{;}
+             \PY{n}{P}\PY{p}{(}\PY{p}{:}\PY{p}{,}\PY{p}{:}\PY{p}{,}\PY{n+nb}{i}\PY{p}{)} \PY{p}{=} \PY{n}{Pnew}\PY{p}{;}
+             \PY{n}{KG}\PY{p}{(}\PY{p}{:}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{,}\PY{n+nb}{i}\PY{p}{)}\PY{p}{=}\PY{n}{Kgain}\PY{p}{;}
+             \PY{c}{\PYZpc{}KG(:,2,i)=Kgain2;}
+         \PY{k}{end}
+         
+         
+         \PY{c}{\PYZpc{}\PYZpc{} figure}
+         \PY{n}{showResult}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+
+
+    \end{Verbatim}
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{EKF_files/EKF_19_1.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{EKF_files/EKF_19_2.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{EKF_files/EKF_19_3.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{EKF_files/EKF_19_4.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{EKF_files/EKF_19_5.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \section{2つの観測を持ったEKFの実装}\label{ux3064ux306eux89b3ux6e2cux3092ux6301ux3063ux305fekfux306eux5b9fux88c5}
+
+ステレオと2Dのスケーリングの観測を合わせたEKFを以下に示す。
+順番は恐らく関係ないはず\ldots{}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}13}]:} \PY{c}{\PYZpc{}\PYZpc{} system matrix}
+         \PY{n}{A} \PY{p}{=} \PY{p}{[} \PY{l+m+mi}{1}\PY{p}{,}\PY{l+m+mi}{0}\PY{p}{,}\PY{l+m+mi}{0}\PY{p}{;}\PY{l+m+mi}{0}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{,}\PY{n}{ST}\PY{p}{;}\PY{l+m+mi}{0}\PY{p}{,}\PY{l+m+mi}{0}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{;}
+         \PY{n}{B} \PY{p}{=} \PY{p}{[}\PY{l+m+mi}{0}\PY{p}{;} \PY{n}{ST}\PYZca{}\PY{l+m+mi}{2}\PY{o}{/}\PY{l+m+mi}{2}\PY{p}{;} \PY{n}{ST}\PY{p}{]}\PY{p}{;}
+         \PY{n}{Q} \PY{p}{=} \PY{n}{B}\PY{o}{*}\PY{n}{B}\PY{p}{.}\PY{o}{\PYZsq{}}\PY{p}{;}
+         \PY{c}{\PYZpc{} Measurment Covariance}
+         \PY{n}{R1} \PY{p}{=} \PY{n}{STEREO\PYZus{}NOISE\PYZus{}S}\PY{p}{;}
+         \PY{n}{R2} \PY{p}{=} \PY{l+m+mf}{0.0005}\PY{p}{;}
+         
+         \PY{c}{\PYZpc{}\PYZpc{} init}
+         \PY{n}{Pinit} \PY{p}{=} \PY{n+nb}{diag}\PY{p}{(}\PY{p}{[}\PY{l+m+mi}{100}\PY{p}{,}\PY{l+m+mi}{100}\PY{p}{,}\PY{l+m+mi}{100}\PY{p}{]}\PY{p}{)}\PY{p}{;}
+         \PY{n}{lam0} \PY{p}{=} \PY{l+m+mi}{1}\PY{o}{/}\PY{n}{Scale}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{)}\PY{o}{/}\PY{n}{Z}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{)}\PY{p}{;}
+         \PY{n}{Xinit} \PY{p}{=} \PY{p}{[}\PY{n}{lam0} \PY{n}{Z}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{)} \PY{n}{VZ}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{)}\PY{p}{]}\PY{p}{;}
+         
+         \PY{n}{P} \PY{p}{=} \PY{n+nb}{zeros}\PY{p}{(}\PY{l+m+mi}{3}\PY{p}{,}\PY{l+m+mi}{3}\PY{p}{,}\PY{n+nb}{length}\PY{p}{(}\PY{n}{t}\PY{p}{)}\PY{p}{)}\PY{p}{;}
+         \PY{n}{X} \PY{p}{=} \PY{n+nb}{zeros}\PY{p}{(}\PY{l+m+mi}{3}\PY{p}{,}\PY{n+nb}{length}\PY{p}{(}\PY{n}{t}\PY{p}{)}\PY{p}{)}\PY{p}{;}
+         \PY{n}{KG} \PY{p}{=} \PY{n+nb}{zeros}\PY{p}{(}\PY{l+m+mi}{3}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{,}\PY{n+nb}{length}\PY{p}{(}\PY{n}{t}\PY{p}{)}\PY{p}{)}\PY{p}{;}
+         \PY{n}{P}\PY{p}{(}\PY{p}{:}\PY{p}{,}\PY{p}{:}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{)} \PY{p}{=} \PY{n}{Pinit}\PY{p}{;}
+         \PY{n}{X}\PY{p}{(}\PY{p}{:}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{)} \PY{p}{=} \PY{n}{Xinit}\PY{p}{;}
+         
+         \PY{c}{\PYZpc{}\PYZpc{}}
+         \PY{n}{BF\PYZus{}} \PY{p}{=} \PY{n}{BF}\PY{p}{;}
+         \PY{k}{for} \PY{n+nb}{i}\PY{p}{=}\PY{l+m+mi}{2}\PY{p}{:}\PY{n+nb}{length}\PY{p}{(}\PY{n}{t}\PY{p}{)}
+             \PY{c}{\PYZpc{} Estimate}
+             \PY{n}{Xhat} \PY{p}{=} \PY{n}{A} \PY{o}{*} \PY{n}{X}\PY{p}{(}\PY{p}{:}\PY{p}{,}\PY{n+nb}{i}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{)}\PY{p}{;}
+             \PY{n}{Phat} \PY{p}{=} \PY{n}{A}\PY{o}{*}\PY{n}{P}\PY{p}{(}\PY{p}{:}\PY{p}{,}\PY{p}{:}\PY{p}{,}\PY{n+nb}{i}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{)}\PY{o}{*}\PY{n}{A}\PY{p}{.}\PY{o}{\PYZsq{}} \PY{o}{+} \PY{n}{Q}\PY{p}{;}
+             
+             \PY{c}{\PYZpc{} Switch value}
+             \PY{k}{if} \PY{n}{mDisp}\PY{p}{(}\PY{n+nb}{i}\PY{p}{)}\PY{o}{==} \PY{n}{INFF}
+                 \PY{n}{R1\PYZus{}} \PY{p}{=} \PY{n}{INFF}\PY{o}{*}\PY{n}{INFF}\PY{p}{;} \PY{n}{mD}\PY{p}{=}\PY{l+m+mi}{0}\PY{p}{;} \PY{n}{R2\PYZus{}}\PY{p}{=}\PY{n}{R2}\PY{o}{/}\PY{l+m+mi}{100}\PY{p}{;}
+             \PY{k}{else}
+                 \PY{n}{R1\PYZus{}} \PY{p}{=} \PY{n}{R1}\PY{p}{;} \PY{n}{mD} \PY{p}{=} \PY{n}{mDisp}\PY{p}{(}\PY{n+nb}{i}\PY{p}{)}\PY{p}{;} \PY{n}{R2\PYZus{}}\PY{p}{=}\PY{n}{R2}\PY{p}{;}  
+             \PY{k}{end}
+             \PY{c}{\PYZpc{}H1 = [0 \PYZhy{}BF\PYZus{}/Xhat(2)/Xhat(2) 0];}
+             \PY{c}{\PYZpc{}H1 = [0 \PYZhy{}mD/Xhat(2) 0];}
+             \PY{n}{H1} \PY{p}{=} \PY{p}{[}\PY{l+m+mi}{0} \PY{o}{\PYZhy{}}\PY{n}{mD}\PYZca{}\PY{l+m+mi}{2}\PY{o}{/}\PY{n}{BF\PYZus{}} \PY{l+m+mi}{0}\PY{p}{]}\PY{p}{;}
+             
+             \PY{c}{\PYZpc{} KF gain}
+             \PY{n}{Kgain} \PY{p}{=} \PY{n}{Phat} \PY{o}{*} \PY{n}{H1}\PY{p}{.}\PY{o}{\PYZsq{}} \PY{o}{/} \PY{p}{(}\PY{n}{H1}\PY{o}{*}\PY{n}{Phat}\PY{o}{*}\PY{n}{H1}\PY{p}{.}\PY{o}{\PYZsq{}}\PY{o}{+}\PY{n}{R1\PYZus{}}\PY{p}{)}\PY{p}{;}
+             \PY{c}{\PYZpc{} update}
+             \PY{n}{Xhat2} \PY{p}{=}  \PY{n}{Xhat} \PY{o}{+} \PY{n}{Kgain}\PY{o}{*}\PY{p}{(}\PY{n}{mDisp}\PY{p}{(}\PY{n+nb}{i}\PY{p}{)} \PY{o}{\PYZhy{}} \PY{n}{BF\PYZus{}}\PY{o}{/}\PY{n}{Xhat}\PY{p}{(}\PY{l+m+mi}{2}\PY{p}{)}\PY{p}{)}\PY{p}{;}
+             \PY{n}{Phat2} \PY{p}{=} \PY{p}{(}\PY{n+nb}{eye}\PY{p}{(}\PY{l+m+mi}{3}\PY{p}{)} \PY{o}{\PYZhy{}} \PY{n}{Kgain}\PY{o}{*}\PY{n}{H1}\PY{p}{)}\PY{o}{*}\PY{n}{Phat} \PY{p}{;}
+         
+             \PY{k}{if} \PY{n}{mDisp}\PY{p}{(}\PY{n+nb}{i}\PY{p}{)}\PY{o}{==} \PY{n}{INFF}
+                 \PY{n}{R2\PYZus{}}\PY{p}{=}\PY{n}{R2}\PY{o}{/}\PY{l+m+mi}{100}\PY{p}{;}
+                 \PY{n}{H2} \PY{p}{=} \PY{p}{[}\PY{l+m+mi}{0} \PY{n}{Xhat2}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{)} \PY{l+m+mi}{0}\PY{p}{]}\PY{p}{;}
+             \PY{k}{else}
+                 \PY{n}{R2\PYZus{}}\PY{p}{=}\PY{n}{R2}\PY{p}{;}
+                 \PY{n}{H2} \PY{p}{=} \PY{p}{[}\PY{n}{Xhat2}\PY{p}{(}\PY{l+m+mi}{2}\PY{p}{)} \PY{n}{Xhat2}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{)} \PY{l+m+mi}{0}\PY{p}{]}\PY{p}{;}    
+             \PY{k}{end}
+             
+             
+             \PY{n}{Kgain2} \PY{p}{=} \PY{n}{Phat2} \PY{o}{*} \PY{n}{H2}\PY{p}{.}\PY{o}{\PYZsq{}} \PY{o}{/} \PY{p}{(}\PY{n}{H2}\PY{o}{*}\PY{n}{Phat2}\PY{o}{*}\PY{n}{H2}\PY{p}{.}\PY{o}{\PYZsq{}}\PY{o}{+}\PY{n}{R2\PYZus{}}\PY{p}{)}\PY{p}{;}
+             \PY{c}{\PYZpc{} update 2}
+             \PY{n}{Xnew} \PY{p}{=}  \PY{n}{Xhat2} \PY{o}{+} \PY{n}{Kgain2}\PY{o}{*}\PY{p}{(}\PY{l+m+mi}{1}\PY{o}{/}\PY{n}{Scale}\PY{p}{(}\PY{n+nb}{i}\PY{p}{)} \PY{o}{\PYZhy{}} \PY{n}{Xhat2}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{)}\PY{o}{*}\PY{n}{Xhat2}\PY{p}{(}\PY{l+m+mi}{2}\PY{p}{)}\PY{p}{)}\PY{p}{;}
+             \PY{n}{Pnew} \PY{p}{=} \PY{p}{(}\PY{n+nb}{eye}\PY{p}{(}\PY{l+m+mi}{3}\PY{p}{)} \PY{o}{\PYZhy{}} \PY{n}{Kgain2}\PY{o}{*}\PY{n}{H2}\PY{p}{)}\PY{o}{*}\PY{n}{Phat2}\PY{p}{;}
+             \PY{n}{X}\PY{p}{(}\PY{p}{:}\PY{p}{,}\PY{n+nb}{i}\PY{p}{)} \PY{p}{=} \PY{n}{Xnew}\PY{p}{;}
+             \PY{n}{P}\PY{p}{(}\PY{p}{:}\PY{p}{,}\PY{p}{:}\PY{p}{,}\PY{n+nb}{i}\PY{p}{)} \PY{p}{=} \PY{n}{Pnew}\PY{p}{;}
+             \PY{n}{KG}\PY{p}{(}\PY{p}{:}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{,}\PY{n+nb}{i}\PY{p}{)}\PY{p}{=}\PY{n}{Kgain}\PY{p}{;}
+             \PY{n}{KG}\PY{p}{(}\PY{p}{:}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{,}\PY{n+nb}{i}\PY{p}{)}\PY{p}{=}\PY{n}{Kgain2}\PY{p}{;}
+         \PY{k}{end}
+         
+         
+         \PY{c}{\PYZpc{}\PYZpc{}}
+         \PY{n}{showResult}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+
+
+    \end{Verbatim}
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{EKF_files/EKF_21_1.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{EKF_files/EKF_21_2.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{EKF_files/EKF_21_3.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{EKF_files/EKF_21_4.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{EKF_files/EKF_21_5.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \subsection{結論}\label{ux7d50ux8ad6}
+
+単体でやるよりEKFでやった方がいいという直感的な間隔を確かめられた。
+誤差の共分散行列の設定によって推定値の位相遅れとノイズへの頑強性がトレードオフになるということも確認できる。
+中途半端な値にすると収束しなかったりでこの辺りの設計には慣れが必要っぽい。
 
 
     % Add a bibliography block to the postdoc

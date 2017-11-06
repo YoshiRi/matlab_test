@@ -9,4 +9,5 @@ clear all
 MakeSinData;
 
 %% EKF estimation and show
-Only2D_Zupdate
+% Only2D_Zupdate
+EKFfusion

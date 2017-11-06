@@ -8,10 +8,10 @@ R1 = STEREO_NOISE_S;
 R2 = 0.0005;
 
 %% init
-Pinit = diag([100,100,100000]);
+Pinit = diag([100,100,100]);
 lam0 = 1/Scale(1)/Z(1);
 Xinit = [lam0 Z(1) VZ(1)];
-Xinit = [lam0 Z(1) -1];
+Xinit = [lam0 Z(1) VZ(1)];
 
 
 P = zeros(3,3,length(t));

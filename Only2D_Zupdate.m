@@ -5,7 +5,7 @@ B = [0; ST^2/2; ST];
 Q = B*B.';
 % Measurment Covariance
 R1 = STEREO_NOISE_S;
-R2 = 5;
+R2 = 0.0005;
 
 %% init
 Pinit = diag([100,100,100]);

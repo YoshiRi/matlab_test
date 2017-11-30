@@ -9,6 +9,10 @@ clear all
 MakeSinData;
 
 %% EKF estimation and show
- Only2D_Zupdate
+check_cinterval = 1; % check confidence interval
+rename='';
+% Only2D_Zupdate
 %Only2D
-% EKFfusion
+%  EKFfusion
+ EKFfusion_jark
+ 

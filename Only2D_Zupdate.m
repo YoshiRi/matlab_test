@@ -19,6 +19,10 @@ P(:,:,1) = Pinit;
 X(:,1) = Xinit;
 
 
+    Xmax = zeros(3,length(t));
+    Xmin = zeros(3,length(t));
+
+
 %%
 BF_ = BF;
 for i=2:length(t)
@@ -49,6 +53,13 @@ for i=2:length(t)
     P(:,:,i) = Pnew;
     KG(:,1,i)=Kgain;
     %KG(:,2,i)=Kgain2;
+    
+    if check_cinterval
+        [Xmax_,Xmin_]=ConfidenceInterval(Xnew,Pnew);
+        Xmax(:,i) = Xmax_;
+        Xmin(:,i) = Xmin_;    
+    end
+
 end
 
 

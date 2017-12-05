@@ -1,12 +1,12 @@
-
+rename = 'only2d'
 %% system matrix
 A = [ 1,0,0;0,1,ST;0,0,1];
 B = [0; ST^2/2; ST];
 Q = B*B.';
 % Measurment Covariance
 R1 = STEREO_NOISE_S;
-R2 = 0.005;
-
+R2 = 0.01;
+Q1 = 0.1;
 %% init
 Pinit = diag([100,100,100]);
 lam0 = 1/Scale(1)/Z(1);
@@ -26,7 +26,7 @@ BF_ = BF;
 for i=2:length(t)
     % Estimate
     Xhat = A * X(:,i-1);
-    Phat = A*P(:,:,i-1)*A.' + Q;
+    Phat = A*P(:,:,i-1)*A.' + Q*Q1;
     
     
     % Switch value

@@ -42,11 +42,13 @@ Scale = Z0./Z + Snoise;
 dScale = [1; Scale(2:length(t))./Scale(1:length(t)-1)];
 
 hfig=figure(2)
-plot(t,BF./mDisp,'r',t,Z0./Scale,'m--',t,Z,'b-.')
+plt = plot(t,Z,'b-.',t,BF./mDisp,'r',t,Z0./Scale,'m--')
+setfigcolor(plt,'gby')
 title('Estimated Depth')
 xlabel('time [s]')
 ylabel('Depth [m]')
-legend('3D measured','2D measured','ground truth')
+xlim([0 END/2])
+legend('ground truth','3D measured','2D measured')
 grid on;
     pfig = pubfig(hfig);
     pfig.LegendLoc = 'best';

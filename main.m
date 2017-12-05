@@ -12,7 +12,7 @@ MakeSinData;
 check_cinterval = 1; % check confidence interval
 rename='';
 % Only2D_Zupdate
-%Only2D
-%  EKFfusion
- EKFfusion_jark
+Only2D
+ %EKFfusion
+%  EKFfusion_jark
  

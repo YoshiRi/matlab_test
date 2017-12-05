@@ -4,8 +4,9 @@ EVZ = (EZ(2:len) - EZ(1:len-1) )/ST;
 EZ2=Z0./Scale;
 EVZ2 = (EZ2(2:len) - EZ2(1:len-1) )/ST;
 
-hfig=figure(4)
-plot(t,X(1,:).','r',[t(1) t(len)],[1/Z0 1/Z0],'b--')
+hfig=figure(4) 
+plt = plot(t,X(1,:).','-',[t(1) t(len)],[1/Z0 1/Z0],'--')
+setfigcolor(plt,'rg')
 title('Magnitude Estimation')
 xlabel('time [s]')
 ylabel('inv depth [1/m]')
@@ -19,7 +20,8 @@ expfig([rename,'MagEstimation'],'-pdf');
 
 
 hfig=figure(5)
-plot(t,Z,'g-.',t,BF./mDisp,'b--',t,EZ2,'m-.',t,X(2,:).','r')
+plt=plot(t,Z,'g-.',t,BF./mDisp,'b--',t,EZ2,'y-.',t,X(2,:).','r')
+setfigcolor(plt,'gbyr')
 title('Depth Estimation')
 xlim([0 END/2])
 xlabel('time [s]')
@@ -44,7 +46,8 @@ hfig=figure(6)
 % pfig.LegendLoc = 'best';
 % pfig.FigDim = [15 11];
 % expfig([rename,'VelocityEstimation'],'-pdf');
-plot(t,VZ,'g-',t(1:len-1),EVZ,'b--',t(1:len-1),EVZ2,'m-.',t,X(3,:).','r')
+plt=plot(t,VZ,'g-',t(1:len-1),EVZ,'b--',t(1:len-1),EVZ2,'y-.',t,X(3,:).','r')
+setfigcolor(plt,'gbyr')
 xlim([0 END/2])
 ylim([-1/2 1/2])
 title('Velocity Estimation')
@@ -61,7 +64,8 @@ expfig([rename,'VelocityEstimation'],'-pdf');
 %%
 figure(7)
 title('KalmanGain')
-plot(t,squeeze(KG(:,1,:)),'-',t,squeeze(KG(:,2,:)),'--')
+plt=plot(t,squeeze(KG(:,1,:)),'-',t,squeeze(KG(:,2,:)),'--')
+setfigcolor(plt,'gr')
 xlabel('time [s]')
 ylabel('velocity [m/s]')
 grid on
@@ -77,7 +81,8 @@ grid on
 Len = length(t);
 if check_cinterval
     hfig=figure(9)
-    plot([t(1) t(Len)],[1/Z0 1/Z0],'g-',t,X(1,:).','r',t,Xmax(1,:),'b--',t,Xmin(1,:),'b-.')
+    plt=plot([t(1) t(Len)],[1/Z0 1/Z0],'g-',t,X(1,:).','r',t,Xmax(1,:),'b--',t,Xmin(1,:),'b-.')
+    setfigcolor(plt,'grbb')
     title('Magnitude Estimation w/ 95% Confidence Interval ')
     xlabel('time [s]')
     ylabel('inv depth [1/m]')
@@ -86,10 +91,11 @@ if check_cinterval
     pfig = pubfig(hfig);
     pfig.LegendLoc = 'best';
     pfig.FigDim = [15 11];
-    expfig([rename,'Mag Estimation CI'],'-pdf');
+    expfig([rename,'MagEstimationCI'],'-pdf');
 
     hfig=figure(10)
-    plot(t,Z,'g-',t,X(2,:).','r',t,Xmax(2,:),'b--',t,Xmin(2,:),'b-.')
+    plt=plot(t,Z,'g-',t,X(2,:).','r',t,Xmax(2,:),'b--',t,Xmin(2,:),'b-.')
+    setfigcolor(plt,'grbb')
     title('Depth Estimation w/ 95% Confidence Interval')
     xlabel('time [s]')
     ylabel('depth [m]')
@@ -103,7 +109,8 @@ if check_cinterval
 
 
     hfig=figure(11)
-    plot(t,VZ,'g-',t,X(3,:).','r',t,Xmax(3,:),'b--',t,Xmin(3,:),'b-.')
+    plt=plot(t,VZ,'g-',t,X(3,:).','r',t,Xmax(3,:),'b--',t,Xmin(3,:),'b-.')
+    setfigcolor(plt,'grbb')
     title('Velocity Estimation w/ 95% Confidence Interval')
     xlabel('time [s]')
     ylabel('velocity [m/s]')
@@ -121,14 +128,15 @@ end
 
 %%
     hfig=figure(12)
-    plot(t,abs(Z-EZ),'b--',t,abs(Z-EZ2),'c-.',t,abs(Z-X(2,:).'),'r')
-    title('Depth Error w/ 95% Confidence Interval')
+    plt=plot(t,abs(Z-EZ),'b--',t,abs(Z-EZ2),'y-.',t,abs(Z-X(2,:).'),'r')
+    setfigcolor(plt,'byr')
+    title('Depth Error')
     xlabel('time [s]')
-    ylabel('depth error[m]')
+    ylabel('depth error [m]')
     grid on
     legend('Stereo Only','2D Only','EKF');  
     xlim([0 END/2])
-    ylim([0 0.1])
+    ylim([0 0.02])
     pfig = pubfig(hfig);
     pfig.LegendLoc = 'best';
     pfig.FigDim = [15 11];
@@ -136,14 +144,15 @@ end
 
 
     hfig=figure(13)
-    plot(t(1:len-1),abs(VZ(1:len-1)-EVZ),'b--',t(1:len-1),abs(VZ(1:len-1)-EVZ2),'c-.',t,abs(VZ-X(3,:).'),'r')
-    title('Velocity Error w/ 95% Confidence Interval')
+    plt=plot(t(1:len-1),abs(VZ(1:len-1)-EVZ),'b--',t(1:len-1),abs(VZ(1:len-1)-EVZ2),'y-.',t,abs(VZ-X(3,:).'),'r')
+    setfigcolor(plt,'byr')
+    title('Velocity Error ')
     xlabel('time [s]')
-    ylabel('velocity error[m/s]')
+    ylabel('velocity error [m/s]')
     grid on
     legend('Stereo Only','2D Only','EKF');
     xlim([0 END/2])
-     ylim([0 0.1])
+     ylim([0 0.2])
     pfig = pubfig(hfig);
     pfig.LegendLoc = 'best';
     pfig.FigDim = [15 11];
@@ -166,6 +175,7 @@ val = [ZstereoErr,ZscaleErr,ZekfErr];
 b = bar(val);
 set( gca, 'XTickLabel', {'Stereo','Scaling','EKF'} )
 title('Average Absolute Error in Depth')
+    ylabel('depth error[m]')
     pfig = pubfig(hfig);
     pfig.LegendLoc = 'best';
     pfig.FigDim = [15 11];
@@ -176,6 +186,7 @@ val = [VZstereoErr,VZscaleErr,VZekfErr];
 b = bar(val);
 set( gca, 'XTickLabel', {'Stereo','Scaling','EKF'} )
 title('Average Absolute Error in Velocity')
+    ylabel('velocity error [m/s]')
     pfig = pubfig(hfig);
     pfig.LegendLoc = 'best';
     pfig.FigDim = [15 11];

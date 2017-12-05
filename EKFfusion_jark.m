@@ -103,7 +103,7 @@ pfig.FigDim = [15 11];
 expfig([rename,'AccEstimationCI'],'-pdf');
 
 hfig=figure(17)
-plot(t,AZ,'g',t(3:len),EAZ,'b--',t(3:len),EAZ2,'c-.',t,X(4,:).','r')
+plot(t,AZ,'g',t(3:len),EAZ,'b--',t(3:len),EAZ2,'y-.',t,X(4,:).','r')
 title('Acceleration Estimation')
 xlim([0 END/2])
 ylim([-1 1])

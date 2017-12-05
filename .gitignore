@@ -47,5 +47,5 @@ Temporary Items
 .apdisk
 
 # MATLAB files 
-.asv
-.pdf
+*.asv
+*.pdf

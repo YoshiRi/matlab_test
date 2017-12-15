@@ -12,7 +12,7 @@ MakeSinData;
 check_cinterval = 1; % check confidence interval
 rename='';
 % Only2D_Zupdate
-Only2D
+% Only2D
  %EKFfusion
 %  EKFfusion_jark
- 
+ run('./OBSapproach/OBSapproach_test.m')

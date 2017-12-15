@@ -5,7 +5,7 @@ B = [0; ST^2/2; ST];
 Q = B*B.';
 % Measurment Covariance
 R1 = STEREO_NOISE_S;
-R2 = 0.001;
+R2 = 0.01;
 
 %% init
 Pinit = diag([100,100,100]);
@@ -22,13 +22,13 @@ X(:,1) = Xinit;
     Xmax = zeros(3,length(t));
     Xmin = zeros(3,length(t));
 
-
+    pole =2*pi* [10,10,10];
 %%
 BF_ = BF;
 for i=2:length(t)
     % Estimate
     Xhat = A * X(:,i-1);
-    Phat = A*P(:,:,i-1)*A.' + Q;
+    Phat = A*P(:,:,i-1)*A.' + Q*0.1;
     
     % Switch value
     if mDisp(i)== INFF
@@ -43,7 +43,8 @@ for i=2:length(t)
     H2 = [0 1/Z0 0];
     
     
-    Kgain = Phat * H2.' / (H2*Phat*H2.'+R2);
+%     Kgain  = place(A' ,H2',pole)';
+    Kgain = Phat * H2.' / (H2*Phat*H2.'+R2/10);
     % update 2
     Xnew =  Xhat + Kgain*(1/Scale(i) - 1/Z0 *Xhat(2));
     Pnew = (eye(3) - Kgain*H2)*Phat;
@@ -64,4 +65,5 @@ end
 
 
 %% figure
-showResult
+% run('../showResultOnly')
+showResultOnly

@@ -13,6 +13,7 @@ check_cinterval = 1; % check confidence interval
 rename='';
 % Only2D_Zupdate
 % Only2D
- %EKFfusion
+% EKFfusion
+EKFfusion_compare
 %  EKFfusion_jark
- run('./OBSapproach/OBSapproach_test.m')
+%  run('./OBSapproach/OBSapproach_test.m')

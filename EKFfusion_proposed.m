@@ -1,3 +1,4 @@
+% sorry this is old version
 
 %% system matrix
 A = [ 1,0,0;0,1,ST;0,0,1];

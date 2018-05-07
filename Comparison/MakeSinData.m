@@ -4,6 +4,7 @@
 ST = 0.033 %33ms
 ST = 0.1 %33ms
 END = 20.0 % 5sec simulation
+
 STEREO_NOISE_S = 0.5; % 1px sigma for stereo disparity noise
 MONO_NOISE_S = 1; % 1?? sigma for monocular distance estimation noise
 
@@ -11,10 +12,11 @@ MONO_NOISE_S = 1; % 1?? sigma for monocular distance estimation noise
 t = (0:ST:END).'; %time 
 len = size(t,1);
 freq =0.16;
+phase = pi/2
 % Z = 0.3 + 0.15*sin(2*pi*freq*t+pi/2);% 300mm +- 100mm
-Z = 0.315 + 0.15*sin(2*pi*freq*t+pi/2);% 300mm +- 100mm
-VZ = 2*pi*freq*0.15*cos(2*pi*freq*t+pi/2);
-AZ = -2*pi*2*pi*freq*0.15*freq*sin(2*pi*freq*t+pi/2);
+Z = 0.315 + 0.15*sin(2*pi*freq*t+phase);% 300mm +- 100mm
+VZ = 2*pi*freq*0.15*cos(2*pi*freq*t+phase);
+AZ = -2*pi*2*pi*freq*0.15*freq*sin(2*pi*freq*t+phase);
 
 %% Noisy Observation 
 BF = 0.065*400; % base line * focal length

@@ -2,7 +2,7 @@
 %true depth
 % sampling time 
 ST = 0.033 %33ms
-ST = 0.1 %33ms
+% ST = 0.1 %33ms
 END = 20.0 % 5sec simulation
 
 STEREO_NOISE_S = 0.5; % 1px sigma for stereo disparity noise

@@ -4,7 +4,7 @@ setfigcolor(plt,'grobp')
 title('Magnitude Estimation')
 xlabel('time [s]')
 ylabel('inv depth [1/m]')
-xlim([0 END/2])
+xlim([0 END])
 grid on
 legend('GT','Prop','Conv1','Conv2','Conv3','Location','best')
 
@@ -14,7 +14,7 @@ setfigcolor(plt,'grobp')
 title('Depth Estimation')
 xlabel('time [s]')
 ylabel('depth [m]')
-xlim([0 END/2])
+xlim([0 END])
 grid on
 legend('GT','Prop','Conv1','Conv2','Conv3','Location','best')
 
@@ -24,7 +24,7 @@ setfigcolor(plt,'grobp')
 title('Velocity Estimation')
 xlabel('time [s]')
 ylabel('velocity [m/s]')
-xlim([0 END/2])
+xlim([0 END])
 ylim([-0.2 0.2])
 grid on
 legend('GT','Prop','Conv1','Conv2','Conv3','Location','best')
@@ -36,7 +36,7 @@ setfigcolor(plt,'robp')
 title('Magnitude Estimation Error')
 xlabel('time [s]')
 ylabel('inv depth [1/m]')
-xlim([0 END/2])
+xlim([0 END])
 grid on
 legend('Prop','Conv1','Conv2','Conv3','Location','best')
 
@@ -46,7 +46,7 @@ setfigcolor(plt,'robp')
 title('Depth Estimation Error')
 xlabel('time [s]')
 ylabel('depth [m]')
-xlim([0 END/2])
+xlim([0 END])
 grid on
 legend('Prop','Conv1','Conv2','Conv3','Location','best')
 
@@ -56,7 +56,7 @@ setfigcolor(plt,'robp')
 title('Velocity Estimation Error')
 xlabel('time [s]')
 ylabel('velocity [m/s]')
-xlim([0 END/2])
+xlim([0 END])
 grid on
 legend('Prop','Conv1','Conv2','Conv3','Location','best')
 

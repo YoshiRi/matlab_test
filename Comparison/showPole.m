@@ -6,7 +6,7 @@ P3 = Pole_conv2;
 P4 = Pole_conv3;
 
 % for i = 1:100
-i = 5
+i = 3
 
 
 %%
@@ -18,7 +18,7 @@ plot(real(P1(:,i)),imag(P1(:,i)),'o')
 hold off
 grid on
 % legend('1st ','2nd ','3rd','4th','Location','northeast')
-legend('Poles')
+legend('Poles','Location','northeast')
 title('Poles for Prop1')
 xlabel('Real');ylabel('Imaginary');
 xlim([-1 1.5]);ylim([-2 2]);
@@ -30,7 +30,7 @@ plot(real(P2(:,i)),imag(P2(:,i)),'o')
 hold off
 grid on
 % legend('1st ','2nd ','3rd','4th','Location','northeast')
-legend('Poles')
+legend('Poles','Location','northeast')
 title('Poles for Conv1')
 xlabel('Real');ylabel('Imaginary');
 xlim([-1 1.5]);ylim([-2 2]); 
@@ -42,7 +42,7 @@ plot(real(P3(:,i)),imag(P3(:,i)),'o')
 hold off
 grid on
 % legend('1st ','2nd ','3rd','4th','Location','northeast')
-legend('Poles')
+legend('Poles','Location','northeast')
 title('Poles for Conv2')
 xlabel('Real');ylabel('Imaginary');
 xlim([-1 1.5]);ylim([-2 2]);
@@ -54,7 +54,7 @@ plot(real(P4(:,i)),imag(P4(:,i)),'o')
 hold off
 grid on
 % legend('1st ','2nd ','3rd','4th','Location','northeast')
-legend('Poles')
+legend('Poles','Location','northeast')
 title('Poles for Conv3')
 xlabel('Real');ylabel('Imaginary');
 xlim([-1 1.5]);ylim([-2 2]);
@@ -72,10 +72,10 @@ plot([0 0],[-10 10],'LineStyle','--');
 hold off
 grid on
 % legend('1st ','2nd ','3rd','4th','Location','northeast')
-legend('Poles')
+legend('Poles','Location','northeast')
 title('Poles for Prop1')
 xlabel('Real');ylabel('Imaginary');
-xlim([-10 5]);ylim([-10 10]);
+xlim([-15 5]);ylim([-10 10]);
 %%
 subplot(2,2,2)
 hold on
@@ -84,10 +84,10 @@ plot([0 0],[-10 10],'LineStyle','--');
 hold off
 grid on
 % legend('1st ','2nd ','3rd','4th','Location','northeast')
-legend('Poles')
+legend('Poles','Location','northeast')
 title('Poles for Conv1')
 xlabel('Real');ylabel('Imaginary');
-xlim([-10 5]);ylim([-10 10]);
+xlim([-15 5]);ylim([-10 10]);
 %%
 subplot(2,2,3)
 hold on
@@ -96,10 +96,10 @@ plot([0 0],[-10 10],'LineStyle','--');
 hold off
 grid on
 % legend('1st ','2nd ','3rd','4th','Location','northeast')
-legend('Poles')
+legend('Poles','Location','northeast')
 title('Poles for Conv2')
 xlabel('Real');ylabel('Imaginary');
-xlim([-10 5]);ylim([-10 10]);
+xlim([-15 5]);ylim([-10 10]);
 %% 
 subplot(2,2,4)
 hold on
@@ -108,10 +108,10 @@ plot([0 0],[-10 10],'LineStyle','--');
 hold off
 grid on
 % legend('1st ','2nd ','3rd','4th','Location','northeast')
-legend('Poles')
+legend('Poles','Location','northeast')
 title('Poles for Conv3')
 xlabel('Real');ylabel('Imaginary');
-xlim([-10 5]);ylim([-10 10]);
+xlim([-15 5]);ylim([-10 10]);
 
 % subplot(2,2,[3,4])
 % plot(Etime_,pose,'gx',time(1:i),BF./disps(1:i) .* mask(1:i),'ro--',time(1:i),1/lam ./ scales(1:i),'b+-.',time(1:i),X(2,1:i),'kx-')

@@ -9,13 +9,13 @@ clear all
 MakeSinData;
 
 %% EKF estimation and show
-check_cinterval = 1; % check confidence interval
+check_cinterval = 0; % check confidence interval
 rename='';
 % Only2D_Zupdate
 % Only2D
 % EKFfusion
 EKFfusion_compare
-EKFfusion_PolePlace
+% EKFfusion_PolePlace
 %  EKFfusion_jark
 %  run('./OBSapproach/OBSapproach_test.m')
 %%

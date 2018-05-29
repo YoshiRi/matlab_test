@@ -20,9 +20,9 @@ rename='';
 % Only2D_Zupdate
 % Only2D
 % EKFfusion
-EKFfusion_compare
+% EKFfusion_compare
 % EKFfusion_PolePlace
 %  EKFfusion_jark
 %  run('./OBSapproach/OBSapproach_test.m')
 %%
-showComparison
+% showComparison

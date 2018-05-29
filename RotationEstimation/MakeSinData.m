@@ -26,6 +26,7 @@ h0 = f*Hei./(Z0);
 hl_ = hl+h0/100*randn(len,1);
 hr_ = hr+h0/100*randn(len,1);
 
+s_hat = 
 
 Cta_hat = asin(f*Hei/Wid*(1./hr_-1./hl_));
 figure(1)

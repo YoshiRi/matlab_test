@@ -52,10 +52,10 @@ ylabel('Depth [m]')
 xlim([0 END/2])
 legend('ground truth','3D measured','2D measured')
 grid on;
-    pfig = pubfig(hfig);
-    pfig.LegendLoc = 'best';
-    pfig.Dimension = [15 11];
-    expfig(['Estimated Depth'],'-pdf');
+%     pfig = pubfig(hfig);
+%     pfig.LegendLoc = 'best';
+%     pfig.Dimension = [15 11];
+%     expfig(['Estimated Depth'],'-pdf');
 
 
 hfig=figure(3);
@@ -65,7 +65,7 @@ xlabel('time [s]')
 ylabel('Scaling')
 legend('measured','ground truth')
 grid on;
-    pfig = pubfig(hfig);
-    pfig.LegendLoc = 'best';
-    pfig.Dimension = [15 11];
-    expfig(['Estimated Scaling'],'-pdf');
+%     pfig = pubfig(hfig);
+%     pfig.LegendLoc = 'best';
+%     pfig.Dimension = [15 11];
+%     expfig(['Estimated Scaling'],'-pdf');

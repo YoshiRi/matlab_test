@@ -69,9 +69,11 @@ legend('Prop EKF','Conv EKF','Prop OBS','Location','best')
 ylim([0 0.2])
 Patches;
 %% Save figures
+if savefig
 SaveFigPDF(10,['fig/',rename,'MagEst.PDF'])
 SaveFigPDF(11,['fig/',rename,'DepEst.PDF'])
 SaveFigPDF(12,['fig/',rename,'VelEst.PDF'])
 SaveFigPDF(20,['fig/',rename,'MagErr.PDF'])
 SaveFigPDF(21,['fig/',rename,'DepErr.PDF'])
 SaveFigPDF(22,['fig/',rename,'VelErr.PDF'])
+end

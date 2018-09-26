@@ -11,6 +11,7 @@ MakeSinData;
 %% EKF estimation and show
 check_cinterval = 0; % check confidence interval
 rename='';
+savefig = 0
 % Only2D_Zupdate
 % Only2D
 % EKFfusion

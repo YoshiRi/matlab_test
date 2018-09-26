@@ -98,14 +98,16 @@ for i=2:length(t)
     % Estimate
     Xhat = A * X(:,i-1);
     Phat = A * P(:,:,i-1) * A.' + Q*Q1;
-    
+
+    R2_=R2/10;
+
     % Switch value
     if mDisp(i)== INFF
-        R1_ = INFF*INFF; mD=0; R2_=R2;
+        R1_ = INFF*INFF; mD=0; 
 %         H2 = [0 Xhat(1) 0];
          H2 = [Xhat(2) Xhat(1) 0];
     else
-        R1_ = R1; mD = mDisp(i); R2_=R2;  
+        R1_ = R1; mD = mDisp(i);  
 %         H2 = [Xhat(2) 0 0];        
          H2 = [Xhat(2) Xhat(1) 0];
     end
@@ -156,14 +158,14 @@ for i=2:length(t)
     % Estimate
     Xhat = A * X(:,i-1);
     Phat = A * P(:,:,i-1) * A.' + Q*Q1;
-    
+    R2_=R2*10;
     % Switch value
     if mDisp(i)== INFF
-        R1_ = INFF*INFF; mD=0; R2_=R2/100;
+        R1_ = INFF*INFF; mD=0;
         H2 = [0 Xhat(1) 0];
         H2 = [Xhat(2) Xhat(1) 0];
     else
-        R1_ = RX; mD = mDisp(i); R2_=R2;  
+        R1_ = RX; mD = mDisp(i);  
         H2 = [Xhat(2) 0 0];        
         H2 = [Xhat(2) Xhat(1) 0];
     end

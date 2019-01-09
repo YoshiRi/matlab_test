@@ -35,7 +35,7 @@ X(:,1) = Xinit;
     Xmin = zeros(3,length(t));
  
 %% Xprop
-BF_ = BF;
+BF_ = BF; R2div=100; R1 = 0.05;
 ierror = 0;
 [Almd Blmd]=c2d(Alm,Blm,ST);
 for i=2:length(t)
@@ -57,7 +57,7 @@ for i=2:length(t)
     
     % Switch value
     if abs(disparity) > BF/Zlim
-        R1_ = INFF*INFF; mD=0; R2_=R2/100;
+        R1_ = INFF*INFF; mD=0; R2_=R2/R2div;
         % Reduced System
         A_ = A(2:3,2:3);
         Phat_ = A_*P(2:3,2:3,i-1)*A_'+Q(2:3,2:3)*Q1; Phat_ = Phat(2:3,2:3);
@@ -76,7 +76,7 @@ for i=2:length(t)
     Pnew(2:3,2:3) = (eye(2) - [Kgain2_]*[H2_])*Phat_; 
 %     Pnew = (eye(3) - [Kgain Kgain2]*[H1;H2])*Phat;
     else
-        R1_ = R1; mD = disparity; R2_=R2/100;
+        R1_ = R1; mD = disparity; R2_=R2/R2div;
         H2 = [Xhat(2) 0 0];
 %          H2 = [Xhat(2) Xhat(1) 0];
         H1 = [0 -mD^2/BF_ 0];
@@ -112,6 +112,7 @@ plot1data;
 %% Xconv1
 BF_ = BF;
 ierror = 0;
+R2div = 10; R1 = 0.25;
 for i=2:length(t)
     % Plant 
     Xlm(:,i)=(Almd*Xlm(:,i-1)+Blmd*U(i-1));
@@ -128,7 +129,7 @@ for i=2:length(t)
     Xhat = A * X(:,i-1);
     Phat = A * P(:,:,i-1) * A.' + Q*Q1;
 
-    R2_=R2/10;
+    R2_=R2/R2div;
 
     % Switch value
     if abs(disparity) > BF/Zlim
@@ -173,7 +174,7 @@ X_conv1 = X;
 Pole_conv1 = Poles;
 
 plot1data
-%% Xconv3
+%% XProp OBS
 ierror = 0;
 
 % choose pole

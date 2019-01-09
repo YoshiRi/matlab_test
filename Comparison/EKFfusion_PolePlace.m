@@ -127,7 +127,9 @@ for i=2:length(t)
     % update
     Xnew =  Xhat + [Kgain Kgain2]*[(mDisp(i) - BF_/Xhat(2));(1/Scale(i) - Xhat(1)*Xhat(2))];
     Pnew = (eye(3) - [Kgain Kgain2]*[H1;H2])*Phat;
-
+    
+    C = [H1;H2];
+    Rank(i) = rank(obsv(A,C*A));
     % update 2
     X(:,i) = Xnew;
     P(:,:,i) = Pnew;
@@ -179,6 +181,10 @@ for i=2:length(t)
         Kgain2 = Kpp(:,2);
     end
 
+        C = [H1;H2];
+    Rank(i) = rank(obsv(A,C*A));
+
+    
     % update
     Xnew =  Xhat + [Kgain Kgain2]*[(mDisp(i) - BF_/Xhat(2));(1/Scale(i) - Xhat(1)*Xhat(2))];
     Pnew = (eye(3) - [Kgain Kgain2]*[H1;H2])*Phat;

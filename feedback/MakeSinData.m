@@ -13,8 +13,10 @@ t = (0:ST:END).'; %time
 len = size(t,1);
 freq =0.16;
 phase = pi/3
+Zmag = 0.15;
+Zmag = 0
 % Z = 0.3 + 0.15*sin(2*pi*freq*t+pi/2);% 300mm +- 100mm
-Z = 0.315 + 0.15*sin(2*pi*freq*t+phase);% 300mm +- 100mm
+Z = 0.315 + Zmag*sin(2*pi*freq*t+phase);% 300mm +- 100mm
 VZ = 2*pi*freq*0.15*cos(2*pi*freq*t+phase);
 AZ = -2*pi*2*pi*freq*0.15*freq*sin(2*pi*freq*t+phase);
 

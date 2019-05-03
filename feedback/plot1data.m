@@ -48,3 +48,29 @@ legend('Mag','Pos','Vel')
 %%
 figure(100)
 polarplot(Poles,'o');
+
+figure(101)
+for i = 1:length(t)
+plt =plot(real(log(Poles(:,i))/ST),imag(log(Poles(:,i))/ST),'o');
+plt.Color = [1,1-i/length(t),i/length(t)];
+hold on
+end
+plt2 = plot(real(eig(FB)),imag(eig(FB)),'bx');
+legend([plt,plt2],{'poles for EKF', 'poles for Control'})
+hold off
+xlim([-3 1])
+grid on
+% legend('poles for EKF')
+
+%% figure
+
+figure(200)
+
+Covs =  zeros(length(t),3);
+for i = 1:length(t)
+    Covs(i,:) = diag(squeeze(P(:,:,i)));
+end
+
+plot(t,Covs)
+grid on 
+legend('\sigma_\lambda','\sigma_D','\sigma_V')

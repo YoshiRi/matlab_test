@@ -4,7 +4,7 @@ clear all
 
 %% make data
 % make line motion
-%MakeData
+% MakeData
 % make sin motion
 MakeSinData;
 

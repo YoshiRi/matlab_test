@@ -12,7 +12,9 @@ Q = B*B.';
 % Measurment Covariance
 R1 = STEREO_NOISE_S;
 R2 = 0.01;
-Q1 = 0;
+Q1 = 0.1;
+
+VZ = 0*VZ;
 
 %% init
 % seigyo
@@ -34,7 +36,7 @@ X(:,1) = Xinit;
     Xmax = zeros(3,length(t));
     Xmin = zeros(3,length(t));
  
-%% Xprop
+%% Prop1. EKF
 BF_ = BF;
 ierror = 0;
 [Almd Blmd]=c2d(Alm,Blm,ST);
@@ -43,12 +45,12 @@ for i=2:length(t)
     Xlm(:,i)=(Almd*Xlm(:,i-1)+Blmd*U(i-1));
     Zlm = Xlm(1,i);
     dZlm = Xlm(2,i);
-    Dist = Z(i) - Zlm;
+    Dist = Z(i) - Zlm;;
     dV = VZ(i) - dZlm;
     Dists(:,i) = [Dist;dV];
     % Dist
-    invs = Dist/Z0; % 1 / Scale(i) 
-    disparity = BF/Dist; %m Disp (i)
+    invs = Dist/Z0+MonoNoise(i); % 1 / Scale(i)  
+    disparity = BF/Dist+StereoNoise(i); %m Disp (i)
         
     % Estimate
     Xhat = A * X(:,i-1);
@@ -173,7 +175,7 @@ X_conv1 = X;
 Pole_conv1 = Poles;
 
 
-%% Xconv3
+%% Xprop2 poleplacement2
 ierror = 0;
 
 % choose pole
@@ -197,8 +199,8 @@ for i=2:length(t)
     % Dist
 %     invs = Dist/Z0+Snoise(i); % 1 / Scale(i) 
 %     disparity = BF/Dist+StereoNoise(i); %m Disp (i)
-    invs = Dist/Z0; % 1 / Scale(i) 
-    disparity = BF/Dist; %m Disp (i)
+    invs = Dist/Z0+MonoNoise(i); % 1 / Scale(i)  
+    disparity = BF/Dist+StereoNoise(i); %m Disp (i)
 
     % Estimate
     Xhat = A * X(:,i-1);
@@ -224,14 +226,14 @@ for i=2:length(t)
         Kpp = place(A(2:3,2:3)',A(2:3,2:3)'*[H2(2:3)]',pole(2:3))';
         Kgain2 = [0;Kpp];
         Xnew =  Xhat + [Kgain Kgain2]*[(1/disparity - Xhat(2)/BF_);(invs - Xhat(1)*Xhat(2))];
-        Pnew = (eye(3) - [Kgain Kgain2]*[H1;H2])*Phat;
+        Pnew = (eye(3) - [Kgain Kgain2]*[H1;H2])*Phat*(eye(3) - [Kgain Kgain2]*[H1;H2])'+[Kgain Kgain2]*diag([R1 R2])*[Kgain Kgain2]';
     else
         Kpp = place(A',A'*[H1;H2]',pole)';
         Kgain = Kpp(:,1);
         Kgain2 = Kpp(:,2);
         % update
         Xnew =  Xhat + [Kgain Kgain2]*[(1/disparity - Xhat(2)/BF_);(invs - Xhat(1)*Xhat(2))];
-        Pnew = (eye(3) - [Kgain Kgain2]*[H1;H2])*Phat;
+        Pnew = (eye(3) - [Kgain Kgain2]*[H1;H2])*Phat*(eye(3) - [Kgain Kgain2]*[H1;H2])'+[Kgain Kgain2]*diag([R1 R2])*[Kgain Kgain2]';
     end
 
 
@@ -255,6 +257,107 @@ end
 plot1data;
 X_conv3 = X;
 Pole_conv3 = Poles;
+
+
+%% Xprop3 
+ierror = 0;
+
+% choose pole
+p_hz = -3*pi*2;
+c_pole = [p_hz,p_hz/sqrt(2)+p_hz/sqrt(2)*1i,p_hz/sqrt(2)-p_hz/sqrt(2)*1i];
+c_pole = [p_hz,p_hz/2 + p_hz/sqrt(3)*1i,p_hz/2 - p_hz/sqrt(3)*1i];
+c_pole2 = [p_hz/sqrt(2) + p_hz/sqrt(2)*1i,p_hz/sqrt(2) - p_hz/sqrt(2)*1i];
+pole = exp(c_pole*ST);
+pole2 = exp(c_pole2*ST);
+
+RX = 0.01;
+BF_ = BF;
+for i=2:length(t)
+    % Plant 
+    Xlm(:,i)=(Almd*Xlm(:,i-1)+Blmd*U(i-1));
+    Zlm = Xlm(1,i);
+    dZlm = Xlm(2,i);
+    Dist = Z(i) - Zlm;
+    dV = VZ(i) - dZlm;
+    Dists(:,i) = [Dist;dV];
+    % Dist
+%     invs = Dist/Z0+Snoise(i); % 1 / Scale(i) 
+%     disparity = BF/Dist+StereoNoise(i); %m Disp (i)
+    invs = Dist/Z0+MonoNoise(i); % 1 / Scale(i)  
+    disparity = BF/Dist+StereoNoise(i); %m Disp (i)
+
+    % Estimate
+    Xhat = A * X(:,i-1);
+    Phat = A * P(:,:,i-1) * A.' + Q*Q1;
+    R2_=R2*10;
+    % Switch value
+    if abs(disparity) > BF/Zlim
+        R1_ = INFF*INFF; mD=0;
+        H2 = [0 Xhat(1) 0];
+%         H2 = [Xhat(2) Xhat(1) 0];
+    else
+        R1_ = RX; mD = disparity; 
+        H2 = [Xhat(2) 0 0];        
+%         H2 = [Xhat(2) Xhat(1) 0];
+    end
+
+    
+    H1 = [0 1/BF_ 0];
+    ppflags = zeros(length(t),1);
+    
+    if abs(disparity) > BF/Zlim
+        Kgain = Phat * H1.' / (H1*Phat*H1.'+R1_);
+        Kgain2 = Phat * H2.' / (H2*Phat*H2.'+R2_);          
+        kalmanp = eig(A-[Kgain Kgain2]*[H1;H2]*A);
+        kppoles = sort(real(log(kalmanp)/ST),'descend');
+        if kppoles(2)>slowest_control_pole
+        ppflags(i) = 1; 
+        H2 = [Xhat(2) Xhat(1) 0];
+        Kpp = place(A(2:3,2:3)',A(2:3,2:3)'*[H2(2:3)]',pole(2:3))';
+        Kgain2 = [0;Kpp];
+        end
+        Xnew =  Xhat + [Kgain Kgain2]*[(1/disparity - Xhat(2)/BF_);(invs - Xhat(1)*Xhat(2))];
+        Pnew = (eye(3) - [Kgain Kgain2]*[H1;H2])*Phat*(eye(3) - [Kgain Kgain2]*[H1;H2])'+[Kgain Kgain2]*diag([R1_ R2_])*[Kgain Kgain2]';
+    else
+        Kgain = Phat * H1.' / (H1*Phat*H1.'+R1_);
+        Kgain2 = Phat * H2.' / (H2*Phat*H2.'+R2_);          
+        kalmanp = eig(A-[Kgain Kgain2]*[H1;H2]*A);
+        kppoles = sort(real(log(kalmanp)/ST),'descend');
+        if kppoles(1)>slowest_control_pole
+        ppflags(i) = 1;
+        H2 = [Xhat(2) Xhat(1) 0];
+        Kpp = place(A',A'*[H1;H2]',pole)';
+        Kgain = Kpp(:,1);
+        Kgain2 = Kpp(:,2);
+        end
+        % update
+        Xnew =  Xhat + [Kgain Kgain2]*[(1/disparity - Xhat(2)/BF_);(invs - Xhat(1)*Xhat(2))];
+        Pnew = (eye(3) - [Kgain Kgain2]*[H1;H2])*Phat*(eye(3) - [Kgain Kgain2]*[H1;H2])'+[Kgain Kgain2]*diag([R1_ R2_])*[Kgain Kgain2]';
+    end
+
+
+    % update 2
+    X(:,i) = Xnew;
+    P(:,:,i) = Pnew;
+    KG(:,1,i)=Kgain;
+    KG(:,2,i)=Kgain2;
+    Poles(:,i) = eig(A-[Kgain Kgain2]*[H1;H2]*A);
+
+    if check_cinterval
+        [Xmax_,Xmin_]=ConfidenceInterval(Xnew,Pnew);
+        Xmax(:,i) = Xmax_;
+        Xmin(:,i) = Xmin_;    
+    end
+       % calc U
+    calcU;
+
+end
+
+plot1data;
+X_conv3 = X;
+Pole_conv3 = Poles;
+
+
 
 %% Xconv1: Changed Prop
 RX = 0.01;
@@ -374,4 +477,4 @@ rename = 'EKFcomp_Nonlinear_forpaper'
 % % rename = ['EKF_prop']
 % showResult
 % showPole
-showComp_forPaper
+showFBComp_forPaper

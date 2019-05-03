@@ -1,12 +1,16 @@
 % calc input U
-Vref = 0; Dref = 0.6; 
+Vref = 0;
 ierror = ierror + (X(2,i) - Dref);
-ierror = ierror + (X(3,i) - Vref);
+% ierror = ierror + (Dist - Dref);
 
-U(:,i) = ierror * gfb - kfb*Xlm(:,i);
-U(:,i) = (X(2,i) - Dref)*20000 + ierror * 500;
-div = 0.8;
-U(:,i) = ((X(3,i) - Vref)*20000 + (X(2,i) - Dref)*20000 + ierror * 500)/div;
+% iverror = ierror + (X(3,i) - Vref);
+
+U(:,i) = -ierror * gfb - kfb*Xlm(:,i);
+U(:,i) = (X(2,i) - Dref)*Kp + ierror * Ki;
+% U(:,i) = (Dist - Dref)*Kp + ierror * Ki;
+
+% div = 2;
+% U(:,i) = ((X(3,i) - Vref)*20000 + (X(2,i) - Dref)*20000 + ierror * 500)/div;
 
 %%
 %  Kppii = 500/div;

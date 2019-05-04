@@ -259,7 +259,7 @@ X_conv3 = X;
 Pole_conv3 = Poles;
 
 
-%% Xprop3 
+%% Xprop3 : EKF + OBS
 ierror = 0;
 
 % choose pole
@@ -269,6 +269,7 @@ c_pole = [p_hz,p_hz/2 + p_hz/sqrt(3)*1i,p_hz/2 - p_hz/sqrt(3)*1i];
 c_pole2 = [p_hz/sqrt(2) + p_hz/sqrt(2)*1i,p_hz/sqrt(2) - p_hz/sqrt(2)*1i];
 pole = exp(c_pole*ST);
 pole2 = exp(c_pole2*ST);
+    ppflags = zeros(length(t),1);
 
 RX = 0.01;
 BF_ = BF;
@@ -303,15 +304,17 @@ for i=2:length(t)
 
     
     H1 = [0 1/BF_ 0];
-    ppflags = zeros(length(t),1);
     
     if abs(disparity) > BF/Zlim
+        H2_ = [Xhat(1) 0];          H2 = [0 Xhat(1) 0];
+        H1_ = [-mD^2/BF_ 0];       H1 = [0 -mD^2/BF_ 0];
         Kgain = Phat * H1.' / (H1*Phat*H1.'+R1_);
         Kgain2 = Phat * H2.' / (H2*Phat*H2.'+R2_);          
+        Kgain2_ = Phat_ * H2_.' / (H2_*Phat_*H2_.'+R2_);
         kalmanp = eig(A-[Kgain Kgain2]*[H1;H2]*A);
         kppoles = sort(real(log(kalmanp)/ST),'descend');
         if kppoles(2)>slowest_control_pole
-        ppflags(i) = 1; 
+        ppflags(i) = 2; 
         H2 = [Xhat(2) Xhat(1) 0];
         Kpp = place(A(2:3,2:3)',A(2:3,2:3)'*[H2(2:3)]',pole(2:3))';
         Kgain2 = [0;Kpp];

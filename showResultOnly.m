@@ -12,10 +12,10 @@ ylabel('inv depth [1/m]')
 xlim([0 END/2])
 grid on
 legend('EKF','GroundTruth');
-pfig = pubfig(hfig);
-pfig.LegendLoc = 'best';
-pfig.FigDim = [15 11];
-% expfig(['MagEstimation'],'-pdf');
+% %pfig = pubfig(hfig);
+% %pfig.LegendLoc = 'best';
+% %pfig.FigDim = [15 11];
+% ex%pfig(['MagEstimation'],'-pdf');
 
 
 hfig=figure(5)
@@ -26,10 +26,10 @@ xlabel('time [s]')
 ylabel('depth [m]')
 grid on
 legend('Ground Truth','Stereo Only','2D Only','EKF');
-pfig = pubfig(hfig);
-pfig.LegendLoc = 'best';
-pfig.FigDim = [15 11];
-% expfig(['DepthEstimation'],'-pdf');
+%pfig = pubfig(hfig);
+%pfig.LegendLoc = 'best';
+%pfig.FigDim = [15 11];
+% ex%pfig(['DepthEstimation'],'-pdf');
 
 
 hfig=figure(6)
@@ -40,10 +40,10 @@ xlabel('time [s]')
 ylabel('velocity [m/s]')
 grid on
 legend('Ground Truth','Stereo Only','2D Only','Average','EKF');
-pfig = pubfig(hfig);
-pfig.LegendLoc = 'best';
-pfig.FigDim = [15 11];
-% expfig(['VelocityEstimation'],'-pdf');
+%pfig = pubfig(hfig);
+%pfig.LegendLoc = 'best';
+%pfig.FigDim = [15 11];
+% ex%pfig(['VelocityEstimation'],'-pdf');
 
 
 %%
@@ -71,10 +71,10 @@ if check_cinterval
     ylabel('inv depth [1/m]')
     grid on
     legend('Ground Truth','EKF','UpperBound','LowerBound');
-    pfig = pubfig(hfig);
-    pfig.LegendLoc = 'best';
-    pfig.FigDim = [15 11];
-%     expfig(['Mag Estimation CI'],'-pdf');
+    %pfig = pubfig(hfig);
+    %pfig.LegendLoc = 'best';
+    %pfig.FigDim = [15 11];
+%     ex%pfig(['Mag Estimation CI'],'-pdf');
 
     hfig=figure(10)
     plot(t,Z,'g-',t,X(2,:).','r',t,Xmax(2,:),'b--',t,Xmin(2,:),'b-.')
@@ -84,10 +84,10 @@ if check_cinterval
     grid on
     legend('Ground Truth','EKF','UpperBound','LowerBound');
     xlim([0 END/2])
-    pfig = pubfig(hfig);
-    pfig.LegendLoc = 'best';
-    pfig.FigDim = [15 11];
-%     expfig(['DepthEstimationCI'],'-pdf');
+    %pfig = pubfig(hfig);
+    %pfig.LegendLoc = 'best';
+    %pfig.FigDim = [15 11];
+%     ex%pfig(['DepthEstimationCI'],'-pdf');
 
 
     hfig=figure(11)
@@ -99,10 +99,10 @@ if check_cinterval
     legend('Ground Truth','EKF','UpperBound','LowerBound');
     xlim([0 END/2])
     ylim([-1 1])
-    pfig = pubfig(hfig);
-    pfig.LegendLoc = 'best';
-    pfig.FigDim = [15 11];
-%     expfig(['VelocityEstimationCI'],'-pdf');
+    %pfig = pubfig(hfig);
+    %pfig.LegendLoc = 'best';
+    %pfig.FigDim = [15 11];
+%     ex%pfig(['VelocityEstimationCI'],'-pdf');
 
 end
 
@@ -117,10 +117,10 @@ end
     legend('Stereo Only','2D Only','EKF');  
     xlim([0 END/2])
     ylim([0 0.1])
-    pfig = pubfig(hfig);
-    pfig.LegendLoc = 'best';
-    pfig.FigDim = [15 11];
-%     expfig(['DepthError'],'-pdf');
+    %pfig = pubfig(hfig);
+    %pfig.LegendLoc = 'best';
+    %pfig.FigDim = [15 11];
+%     ex%pfig(['DepthError'],'-pdf');
 
 
     hfig=figure(13)
@@ -132,10 +132,10 @@ end
     legend('Stereo Only','2D Only','EKF');
     xlim([0 END/2])
      ylim([0 0.1])
-    pfig = pubfig(hfig);
-    pfig.LegendLoc = 'best';
-    pfig.FigDim = [15 11];
-%     expfig(['VelocityError'],'-pdf');
+    %pfig = pubfig(hfig);
+    %pfig.LegendLoc = 'best';
+    %pfig.FigDim = [15 11];
+%     ex%pfig(['VelocityError'],'-pdf');
 
 
 %%
@@ -154,17 +154,17 @@ val = [ZstereoErr,ZscaleErr,ZekfErr];
 b = bar(val);
 set( gca, 'XTickLabel', {'Stereo','Scaling','EKF'} )
 title('Average Absolute Error in Depth')
-    pfig = pubfig(hfig);
-    pfig.LegendLoc = 'best';
-    pfig.FigDim = [15 11];
-%     expfig(['ZErrorEval'],'-pdf');
+    %pfig = pubfig(hfig);
+    %pfig.LegendLoc = 'best';
+    %pfig.FigDim = [15 11];
+%     ex%pfig(['ZErrorEval'],'-pdf');
     
     hfig=figure(15)
 val = [VZstereoErr,VZscaleErr,VZekfErr];
 b = bar(val);
 set( gca, 'XTickLabel', {'Stereo','Scaling','EKF'} )
 title('Average Absolute Error in Velocity')
-    pfig = pubfig(hfig);
-    pfig.LegendLoc = 'best';
-    pfig.FigDim = [15 11];
-%     expfig(['VZErrorEval'],'-pdf');
+    %pfig = pubfig(hfig);
+    %pfig.LegendLoc = 'best';
+    %pfig.FigDim = [15 11];
+%     ex%pfig(['VZErrorEval'],'-pdf');

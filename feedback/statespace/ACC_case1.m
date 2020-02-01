@@ -4,54 +4,39 @@
 % X_conv1 : switch in No stereo
 % X_conv2 : switch in with stereo
 % X_conv3 : no switch
+
 %% system matrix
+% continious Plant  
+tau = 0.2;
+Acp = [0 1 0;0 0 1;0 0 -1/tau];
+Bcp = [0;0;1/tau];
+Ccp = [1 0 0];
+
+syscp = ss(Acp,Bcp,Ccp,[]);
+sysdp = c2d(syscp,ST,'zoh');
+Adp = sysdp.A;
+Bdp = sysdp.B;
+Cdp = sysdp.C;
+% observer
+
 A = [ 1,0,0;0,1,ST;0,0,1];
 B = [0; ST^2/2; ST];
 % B = [0; 0; ST];
 Q = B*B.';
 % Measurment Covariance
-R1 = STEREO_NOISE_S;
-R2 = 0.01;
+R1 = 1;% stereo noise
+R2 = 0.01; % scaling noise
 Q1 = 0.15;
 
 %% init
-% seigyo
-Xlm = zeros(2,length(t));
-Dists = zeros(2,length(t));
-U = zeros(1,length(t));
-
-Pinit = diag([10000,10000,10000]);
-lam0 = 1/dref;
-Xinit = [lam0*0.6 dref*0.9 0];
-% Xinit = [lam0 Z(1) -1];
-
-% proposed
-P = zeros(3,3,length(t));
-X = zeros(3,length(t));
-KG = zeros(3,2,length(t));
-Poles = zeros(3,length(t));
-P(:,:,1) = Pinit;
-X(:,1) = Xinit;
-
-    Xmax = zeros(3,length(t));
-    Xmin = zeros(3,length(t));
+Initialize;
  
 %% Xprop
 BF_ = BF; R2div=100; R1 = 0.05;
-ierror = 0;
-[Almd Blmd]=c2d(Alm,Blm,ST);
+
 for i=2:length(t)
     % Plant 
-    Xlm(:,i)=(Almd*Xlm(:,i-1)+Blmd*U(i-1));
-    Zlm = Xlm(1,i);
-    dZlm = Xlm(2,i);
-    Dist = Z(i) - Zlm;
-    dV = VZ(i) - dZlm;
-    Dists(:,i) = [Dist;dV];
-    % Dist
-    invs = Dist/Z0+Snoise(i); % 1 / Scale(i) 
-    disparity = BF/Dist+StereoNoise(i); %m Disp (i)
-        
+    Plant;        
     % Estimate
     Xhat = A * X(:,i-1);
     Phat = A * P(:,:,i-1) * A.' + Q*Q1;
@@ -98,19 +83,14 @@ for i=2:length(t)
     KG(:,2,i)=Kgain2;
     Poles(:,i) = eig(A-[Kgain Kgain2]*[H1;H2]*A);
 
-    if check_cinterval
-        [Xmax_,Xmin_]=ConfidenceInterval(Xnew,Pnew);
-        Xmax(:,i) = Xmax_;
-        Xmin(:,i) = Xmin_;    
-    end
     
-    % calc U
-    calcU;   U(:,i)=U(:,i)-Fcontact(Dist,dV); 
+ Controller;
 end
 
 X_prop = X;
 Pole_prop = Poles;
-plot1data;
+Xlm_EKF = Xlm;
+plotacc1;
 %% Xconv1
 BF_ = BF;
 ierror = 0;
@@ -177,7 +157,6 @@ Pole_conv1 = Poles;
 
 plot1data
 %% XProp OBS
-ierror = 0;
 
 % choose pole
 p_hz = -3*pi*2;
@@ -191,18 +170,7 @@ RX = 0.01;
 BF_ = BF;
 for i=2:length(t)
     % Plant 
-    Xlm(:,i)=(Almd*Xlm(:,i-1)+Blmd*U(i-1));
-    Zlm = Xlm(1,i);
-    dZlm = Xlm(2,i);
-    Dist = Z(i) - Zlm;
-    dV = VZ(i) - dZlm;
-    Dists(:,i) = [Dist;dV];
-    % Dist
-%     invs = Dist/Z0+Snoise(i); % 1 / Scale(i) 
-%     disparity = BF/Dist+StereoNoise(i); %m Disp (i)
-    invs = Dist/Z0+Snoise(i); % 1 / Scale(i) 
-    disparity = BF/Dist+StereoNoise(i); %m Disp (i)
-
+Plant;
     % Estimate
     Xhat = A * X(:,i-1);
     Phat = A * P(:,:,i-1) * A.' + Q*Q1;
@@ -244,20 +212,14 @@ for i=2:length(t)
     KG(:,1,i)=Kgain;
     KG(:,2,i)=Kgain2;
     Poles(:,i) = eig(A-[Kgain Kgain2]*[H1;H2]*A);
-
-    if check_cinterval
-        [Xmax_,Xmin_]=ConfidenceInterval(Xnew,Pnew);
-        Xmax(:,i) = Xmax_;
-        Xmin(:,i) = Xmin_;    
-    end
-       % calc U
-    calcU;   U(:,i)=U(:,i)-Fcontact(Dist,dV);
+ Controller;
 
 end
 
-plot1data;
 X_conv3 = X;
 Pole_conv3 = Poles;
+Xlm_OBS = Xlm;
+plotacc1;
 
 %% Xconv1: Changed Prop
 RX = 0.01;

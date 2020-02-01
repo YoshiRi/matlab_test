@@ -12,8 +12,8 @@ MakeSinData;
 check_cinterval = 0; % check confidence interval
 rename='';
 
-OBSapproach_test
-% EKFfusion_PolePlace
+%OBSapproach_test
+Poleplacement
 %  EKFfusion_jark
 %  run('./OBSapproach/OBSapproach_test.m')
 %%
